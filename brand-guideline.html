@@ -1,0 +1,2792 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAE Aqiqah — Brand Guideline 2026</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --black: #0a0a0a;
+        --black-soft: #111111;
+        --black-card: #161616;
+        --black-border: #222222;
+        --red: #c41e3a;
+        --red-dark: #9b1730;
+        --red-light: #d93352;
+        --gold: #b8973a;
+        --gold-light: #d4af6a;
+        --white: #ffffff;
+        --white-dim: #e8e8e8;
+        --white-muted: #aaaaaa;
+        --gray: #666666;
+        --gray-light: #333333;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--black);
+        color: var(--white);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 16px;
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      /* ─── NAV ─── */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: rgba(10, 10, 10, 0.95);
+        border-bottom: 1px solid var(--black-border);
+        backdrop-filter: blur(12px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 48px;
+        height: 64px;
+      }
+
+      .nav-brand {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 20px;
+        letter-spacing: 0.15em;
+        color: var(--white);
+      }
+      .nav-brand span {
+        color: var(--red);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 32px;
+        list-style: none;
+      }
+      .nav-links a {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--white-muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--red);
+      }
+
+      /* ─── HERO ─── */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 120px 48px 80px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 60% 50% at 50% 60%,
+            rgba(196, 30, 58, 0.12) 0%,
+            transparent 70%
+          ),
+          repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 79px,
+            rgba(255, 255, 255, 0.015) 80px
+          ),
+          repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 79px,
+            rgba(255, 255, 255, 0.015) 80px
+          );
+      }
+
+      .hero-eyebrow {
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--red);
+        margin-bottom: 32px;
+        position: relative;
+      }
+      .hero-eyebrow::before,
+      .hero-eyebrow::after {
+        content: "—";
+        margin: 0 12px;
+        color: var(--gold);
+        opacity: 0.6;
+      }
+
+      .hero-title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(64px, 10vw, 140px);
+        letter-spacing: 0.05em;
+        line-height: 0.9;
+        color: var(--white);
+        position: relative;
+        margin-bottom: 8px;
+      }
+      .hero-title .red {
+        color: var(--red);
+      }
+
+      .hero-subtitle-big {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(18px, 3vw, 36px);
+        font-style: italic;
+        color: var(--gold-light);
+        margin-bottom: 32px;
+        letter-spacing: 0.02em;
+      }
+
+      .hero-tagline {
+        font-family: "DM Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--white-muted);
+        margin-bottom: 64px;
+      }
+
+      .hero-divider {
+        width: 120px;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--red),
+          var(--gold),
+          transparent
+        );
+        margin: 0 auto 64px;
+      }
+
+      .hero-meta {
+        display: flex;
+        gap: 64px;
+        justify-content: center;
+        position: relative;
+      }
+
+      .hero-meta-item {
+        text-align: center;
+      }
+      .hero-meta-num {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 48px;
+        color: var(--red);
+        line-height: 1;
+        display: block;
+      }
+      .hero-meta-label {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--white-muted);
+        margin-top: 6px;
+        display: block;
+      }
+
+      .scroll-hint {
+        position: absolute;
+        bottom: 32px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        color: var(--gray);
+        font-family: "DM Mono", monospace;
+        font-size: 9px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+      }
+      .scroll-line {
+        width: 1px;
+        height: 48px;
+        background: linear-gradient(to bottom, var(--red), transparent);
+        animation: scrollAnim 2s ease-in-out infinite;
+      }
+      @keyframes scrollAnim {
+        0%,
+        100% {
+          opacity: 0.3;
+          transform: scaleY(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scaleY(1.2);
+        }
+      }
+
+      /* ─── SECTIONS ─── */
+      section {
+        padding: 120px 0;
+        position: relative;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 64px;
+      }
+
+      .section-tag {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: var(--red);
+        margin-bottom: 16px;
+        display: block;
+      }
+
+      .section-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(32px, 4vw, 52px);
+        font-weight: 700;
+        color: var(--white);
+        line-height: 1.15;
+        margin-bottom: 24px;
+      }
+
+      .section-title .accent {
+        color: var(--gold-light);
+        font-style: italic;
+      }
+
+      .section-desc {
+        font-size: 18px;
+        color: var(--white-muted);
+        max-width: 640px;
+        line-height: 1.8;
+        margin-bottom: 64px;
+        font-weight: 300;
+      }
+
+      .rule-line {
+        width: 64px;
+        height: 2px;
+        background: var(--red);
+        margin-bottom: 32px;
+      }
+
+      /* ─── CARDS ─── */
+      .card {
+        background: var(--black-card);
+        border: 1px solid var(--black-border);
+        padding: 40px;
+        position: relative;
+        overflow: hidden;
+      }
+      .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: var(--red);
+      }
+
+      .card-gold::before {
+        background: var(--gold);
+      }
+
+      .card-title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 18px;
+        letter-spacing: 0.15em;
+        color: var(--white);
+        margin-bottom: 12px;
+      }
+
+      .card-body {
+        font-size: 15px;
+        color: var(--white-muted);
+        line-height: 1.7;
+      }
+
+      /* ─── COLOR PALETTE ─── */
+      .palette-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+        margin-bottom: 64px;
+      }
+
+      .swatch {
+        aspect-ratio: 1 / 1.2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 24px;
+        position: relative;
+        overflow: hidden;
+        cursor: default;
+      }
+
+      .swatch-black {
+        background: #0a0a0a;
+        border: 1px solid #222;
+      }
+      .swatch-red {
+        background: #c41e3a;
+      }
+      .swatch-white {
+        background: #ffffff;
+      }
+
+      .swatch-name {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 22px;
+        letter-spacing: 0.1em;
+        display: block;
+      }
+      .swatch-black .swatch-name {
+        color: var(--white);
+      }
+      .swatch-red .swatch-name {
+        color: var(--white);
+      }
+      .swatch-white .swatch-name {
+        color: var(--black);
+      }
+
+      .swatch-hex {
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.15em;
+        display: block;
+        margin-top: 4px;
+      }
+      .swatch-black .swatch-hex {
+        color: var(--gray);
+      }
+      .swatch-red .swatch-hex {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .swatch-white .swatch-hex {
+        color: var(--gray);
+      }
+
+      .swatch-desc {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 13px;
+        font-style: italic;
+        display: block;
+        margin-top: 6px;
+      }
+      .swatch-black .swatch-desc {
+        color: rgba(255, 255, 255, 0.4);
+      }
+      .swatch-red .swatch-desc {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .swatch-white .swatch-desc {
+        color: var(--gray);
+      }
+
+      /* ─── TYPOGRAPHY ─── */
+      .typo-sample {
+        border-bottom: 1px solid var(--black-border);
+        padding: 32px 0;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 48px;
+        align-items: center;
+      }
+
+      .typo-meta {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--white-muted);
+      }
+      .typo-meta strong {
+        color: var(--red);
+        display: block;
+        margin-bottom: 8px;
+        font-size: 11px;
+      }
+
+      /* ─── LOGO RULES ─── */
+      .logo-zone {
+        background: var(--black-card);
+        border: 1px solid var(--black-border);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 64px;
+        position: relative;
+      }
+
+      .logo-zone::after {
+        content: "";
+        position: absolute;
+        inset: 16px;
+        border: 1px dashed rgba(255, 255, 255, 0.06);
+        pointer-events: none;
+      }
+
+      .logo-display {
+        font-family: "Bebas Neue", sans-serif;
+        text-align: center;
+      }
+
+      .logo-display .sae {
+        font-size: 80px;
+        letter-spacing: 0.15em;
+        color: var(--white);
+        display: block;
+        line-height: 1;
+      }
+      .logo-display .sae em {
+        color: var(--red);
+        font-style: normal;
+      }
+
+      .logo-display .aqiqah {
+        font-size: 36px;
+        letter-spacing: 0.4em;
+        color: var(--white-muted);
+        display: block;
+        margin-top: 4px;
+      }
+
+      .logo-display .tagline-logo {
+        font-family: "DM Mono", monospace;
+        font-size: 9px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--gold);
+        display: block;
+        margin-top: 16px;
+        border-top: 1px solid var(--black-border);
+        padding-top: 12px;
+      }
+
+      .logo-arc {
+        width: 100px;
+        height: 50px;
+        border: 2px solid var(--red);
+        border-bottom: none;
+        border-radius: 50px 50px 0 0;
+        margin: 0 auto 16px;
+      }
+
+      /* ─── GRID LAYOUTS ─── */
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+      .grid-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+      }
+      .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      /* ─── CHANNEL BLOCKS ─── */
+      .channel-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 32px;
+      }
+
+      .channel-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        flex-shrink: 0;
+      }
+
+      .channel-name {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 28px;
+        letter-spacing: 0.1em;
+        color: var(--white);
+      }
+      .channel-handle {
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        color: var(--red);
+        letter-spacing: 0.15em;
+      }
+
+      .spec-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .spec-table tr {
+        border-bottom: 1px solid var(--black-border);
+      }
+      .spec-table td {
+        padding: 12px 0;
+        font-size: 14px;
+      }
+      .spec-table td:first-child {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--white-muted);
+        width: 45%;
+      }
+      .spec-table td:last-child {
+        color: var(--white);
+        font-weight: 300;
+      }
+
+      .do-dont {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .do-block {
+        background: rgba(196, 30, 58, 0.06);
+        border: 1px solid rgba(196, 30, 58, 0.2);
+        padding: 20px;
+      }
+      .dont-block {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--black-border);
+        padding: 20px;
+      }
+
+      .do-label {
+        font-family: "DM Mono", monospace;
+        font-size: 9px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        display: block;
+      }
+      .do-label.yes {
+        color: var(--red);
+      }
+      .do-label.no {
+        color: var(--gray);
+      }
+
+      .do-list {
+        list-style: none;
+        font-size: 13px;
+        color: var(--white-dim);
+        line-height: 2;
+      }
+      .do-list li::before {
+        content: "✓ ";
+        color: var(--red);
+        font-weight: 700;
+      }
+      .dont-list li::before {
+        content: "✕ ";
+        color: var(--gray) !important;
+      }
+
+      /* ─── PILLAR BOXES ─── */
+      .pillar {
+        background: var(--black-card);
+        border: 1px solid var(--black-border);
+        padding: 40px 32px;
+        position: relative;
+      }
+      .pillar-num {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 72px;
+        color: rgba(196, 30, 58, 0.12);
+        line-height: 1;
+        position: absolute;
+        top: 16px;
+        right: 24px;
+      }
+      .pillar-title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 20px;
+        letter-spacing: 0.15em;
+        color: var(--red);
+        margin-bottom: 12px;
+        position: relative;
+        z-index: 1;
+      }
+      .pillar-body {
+        font-size: 14px;
+        color: var(--white-muted);
+        line-height: 1.8;
+        position: relative;
+        z-index: 1;
+      }
+      .pillar-list {
+        list-style: none;
+        margin-top: 12px;
+      }
+      .pillar-list li {
+        font-size: 13px;
+        color: var(--white-muted);
+        padding: 4px 0;
+        padding-left: 16px;
+        position: relative;
+      }
+      .pillar-list li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: var(--gold);
+        font-size: 10px;
+      }
+
+      /* ─── PHYSICAL MEDIA ─── */
+      .media-mockup {
+        background: var(--black-card);
+        border: 1px solid var(--black-border);
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .mockup-header {
+        background: var(--red);
+        padding: 16px 24px;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 14px;
+        letter-spacing: 0.2em;
+        color: var(--white);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .mockup-body {
+        padding: 32px 24px;
+      }
+
+      .mockup-spec {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.15em;
+        color: var(--white-muted);
+        text-transform: uppercase;
+        margin-bottom: 6px;
+        display: block;
+      }
+
+      .mockup-val {
+        font-size: 16px;
+        color: var(--white);
+        margin-bottom: 20px;
+        display: block;
+        font-weight: 300;
+      }
+
+      /* ─── LABEL DISPLAY ─── */
+      .label-visual {
+        width: 160px;
+        background: var(--black);
+        border: 2px solid var(--red);
+        border-radius: 8px;
+        overflow: hidden;
+        font-family: "Bebas Neue", sans-serif;
+        text-align: center;
+        margin: 0 auto;
+      }
+      .label-top {
+        background: var(--red);
+        padding: 6px;
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        color: var(--white);
+      }
+      .label-mid {
+        padding: 16px 12px;
+      }
+      .label-sae {
+        font-size: 32px;
+        color: var(--white);
+        letter-spacing: 0.05em;
+        line-height: 1;
+      }
+      .label-aqiqah {
+        font-size: 16px;
+        color: var(--red);
+        letter-spacing: 0.15em;
+      }
+      .label-bottom {
+        background: var(--gold);
+        padding: 6px;
+        font-size: 9px;
+        letter-spacing: 0.15em;
+        color: var(--black);
+      }
+
+      /* ─── SAE FILOSOFI DISPLAY ─── */
+      .sae-letter-block {
+        display: flex;
+        gap: 3px;
+        margin-bottom: 48px;
+      }
+      .sae-letter {
+        flex: 1;
+        background: var(--black-card);
+        border: 1px solid var(--black-border);
+        padding: 40px 24px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .sae-letter:first-child {
+        border-top: 3px solid var(--red);
+      }
+      .sae-letter:nth-child(2) {
+        border-top: 3px solid var(--gold);
+      }
+      .sae-letter:nth-child(3) {
+        border-top: 3px solid var(--white);
+      }
+      .sae-big {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 96px;
+        line-height: 1;
+        color: rgba(255, 255, 255, 0.06);
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .sae-letter-title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 22px;
+        letter-spacing: 0.15em;
+        color: var(--white);
+        margin-bottom: 4px;
+        position: relative;
+        z-index: 1;
+      }
+      .sae-letter-sub {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 14px;
+        font-style: italic;
+        color: var(--white-muted);
+        position: relative;
+        z-index: 1;
+        line-height: 1.5;
+      }
+
+      /* ─── FOOTER ─── */
+      footer {
+        background: var(--black-soft);
+        border-top: 1px solid var(--black-border);
+        padding: 64px;
+        text-align: center;
+      }
+      .footer-logo {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 32px;
+        letter-spacing: 0.15em;
+        color: var(--white);
+        margin-bottom: 8px;
+      }
+      .footer-logo span {
+        color: var(--red);
+      }
+      .footer-tagline {
+        font-family: "Cormorant Garamond", serif;
+        font-style: italic;
+        color: var(--gold-light);
+        font-size: 16px;
+        margin-bottom: 32px;
+      }
+      .footer-info {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        color: var(--gray);
+        line-height: 2;
+      }
+
+      /* ─── BG SECTION ALTERNATES ─── */
+      .section-dark {
+        background: var(--black);
+      }
+      .section-darker {
+        background: var(--black-soft);
+      }
+
+      /* ─── QUOTE BLOCK ─── */
+      .quote-block {
+        border-left: 3px solid var(--red);
+        padding: 24px 32px;
+        margin: 32px 0;
+        background: rgba(196, 30, 58, 0.04);
+      }
+      .quote-text {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        font-style: italic;
+        color: var(--white-dim);
+        line-height: 1.6;
+      }
+      .quote-source {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--red);
+        margin-top: 12px;
+        display: block;
+      }
+
+      /* ─── SPACING HELPERS ─── */
+      .mt-16 {
+        margin-top: 16px;
+      }
+      .mt-24 {
+        margin-top: 24px;
+      }
+      .mt-32 {
+        margin-top: 32px;
+      }
+      .mt-48 {
+        margin-top: 48px;
+      }
+      .mb-48 {
+        margin-bottom: 48px;
+      }
+      .mb-64 {
+        margin-bottom: 64px;
+      }
+
+      /* ─── TONE TAG ─── */
+      .tone-tag {
+        display: inline-block;
+        background: rgba(196, 30, 58, 0.1);
+        border: 1px solid rgba(196, 30, 58, 0.3);
+        color: var(--red);
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        margin: 4px 4px 4px 0;
+      }
+
+      /* ─── USAGE GRID ─── */
+      .usage-row {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 32px;
+        align-items: start;
+        padding: 24px 0;
+        border-bottom: 1px solid var(--black-border);
+      }
+      .usage-label {
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--white-muted);
+        padding-top: 4px;
+      }
+      .usage-value {
+        font-size: 15px;
+        color: var(--white-dim);
+        line-height: 1.7;
+      }
+
+      /* ─── ANIMATION ─── */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fade-in {
+        animation: fadeUp 0.8s ease forwards;
+      }
+
+      /* ─── RESPONSIVE ─── */
+      @media (max-width: 900px) {
+        .container {
+          padding: 0 24px;
+        }
+        nav {
+          padding: 0 24px;
+        }
+        .nav-links {
+          display: none;
+        }
+        .grid-2,
+        .grid-3,
+        .grid-4 {
+          grid-template-columns: 1fr;
+        }
+        .palette-grid {
+          grid-template-columns: 1fr;
+        }
+        .sae-letter-block {
+          flex-direction: column;
+        }
+        .typo-sample {
+          grid-template-columns: 1fr;
+        }
+        .do-dont {
+          grid-template-columns: 1fr;
+        }
+        footer {
+          padding: 40px 24px;
+        }
+        .hero {
+          padding: 100px 24px 60px;
+        }
+        .hero-meta {
+          gap: 32px;
+          flex-wrap: wrap;
+        }
+        .usage-row {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <div class="nav-brand">
+        <a href="index.html" style="text-decoration: none; color: inherit"
+          ><span>SAE</span> AQIQAH</a
+        >
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">← Home</a></li>
+        <li><a href="#brand-identity">Brand</a></li>
+        <li><a href="#colors">Warna</a></li>
+        <li><a href="#typography">Tipografi</a></li>
+        <li><a href="#logo">Logo</a></li>
+        <li><a href="#digital">Digital</a></li>
+        <li><a href="#physical">Media Fisik</a></li>
+        <li><a href="#voice">Voice</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+      <span class="hero-eyebrow">Brand Guideline 2026</span>
+      <h1 class="hero-title"><span class="red">SAE</span><br />AQIQAH</h1>
+      <p class="hero-subtitle-big">"Sempurna Syariatnya, Premium Sajiannya"</p>
+      <p class="hero-tagline">
+        Malang, Jawa Timur &nbsp;·&nbsp; Premium Syar'i Aqiqah &amp; Meat
+        Specialist
+      </p>
+      <div class="hero-divider"></div>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="hero-meta-num">20</span>
+          <span class="hero-meta-label">Tahun Pengalaman</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-num">3</span>
+          <span class="hero-meta-label">Revenue Stream</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-num">6</span>
+          <span class="hero-meta-label">Channel Platform</span>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <div class="scroll-line"></div>
+        <span>scroll</span>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- 01. BRAND IDENTITY -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="section-darker" id="brand-identity">
+      <div class="container">
+        <span class="section-tag">01 / Brand Identity</span>
+        <h2 class="section-title">
+          Pondasi Merek yang<br /><span class="accent">Tak Bisa Ditiru</span>
+        </h2>
+        <div class="rule-line"></div>
+        <p class="section-desc">
+          SAE Aqiqah adalah transformasi 20 tahun pengalaman menjadi brand
+          premium syar'i yang dirancang untuk mendominasi pasar Jawa Timur dan
+          ekspansi nasional.
+        </p>
+
+        <!-- SAE Filosofi -->
+        <div class="sae-letter-block">
+          <div class="sae-letter">
+            <span class="sae-big">S</span>
+            <div class="sae-letter-title">Syar'i</div>
+            <div class="sae-letter-sub">
+              100% sah syariat — ukuran, umur, dan tata cara penyembelihan yang
+              terverifikasi
+            </div>
+          </div>
+          <div class="sae-letter">
+            <span class="sae-big">A</span>
+            <div class="sae-letter-title">Amanah</div>
+            <div class="sae-letter-sub">
+              Transparansi total — kandang sendiri, proses terbuka, pelanggan
+              bisa menyaksikan langsung
+            </div>
+          </div>
+          <div class="sae-letter">
+            <span class="sae-big">E</span>
+            <div class="sae-letter-title">Excellent</div>
+            <div class="sae-letter-sub">
+              Kualitas premium — daging segar, sajian berkelas, pengalaman
+              aqiqah bintang lima
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <div class="card" style="margin-bottom: 24px">
+              <div class="card-title">Visi</div>
+              <div class="card-body">
+                Menjadi ikon revolusi industri aqiqah premium Indonesia — Brand
+                Premium Syar'i No. 1 di Jawa Timur dalam 3 tahun, dengan fondasi
+                ekspansi nasional melalui model franchise.
+              </div>
+            </div>
+            <div class="card card-gold">
+              <div class="card-title">Positioning</div>
+              <div class="card-body">
+                "Premium Syar'i Aqiqah &amp; Meat Specialist" — untuk keluarga
+                Muslim modern usia 25–40 tahun yang mengutamakan keabsahan
+                ibadah dan kualitas sajian.
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="quote-block">
+              <p class="quote-text">
+                "Mengangkat derajat ibadah Aqiqah menjadi pengalaman spiritual
+                yang sah, berkelas, transparan, dan memuaskan dari hulu hingga
+                hilir."
+              </p>
+              <span class="quote-source">Filosofi Brand SAE Aqiqah</span>
+            </div>
+            <div
+              class="card mt-24"
+              style="border-color: var(--gold); border-left-color: var(--gold)"
+            >
+              <div class="card-title">Tagline Resmi</div>
+              <div
+                class="card-body"
+                style="
+                  font-family: &quot;Playfair Display&quot;, serif;
+                  font-style: italic;
+                  font-size: 20px;
+                  color: var(--gold-light);
+                "
+              >
+                "Sempurna Syariatnya, Premium Sajiannya"
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- USP -->
+        <div class="mt-48">
+          <span class="section-tag">Unique Selling Proposition</span>
+          <div class="grid-3 mt-24">
+            <div class="pillar">
+              <div class="pillar-num">01</div>
+              <div class="pillar-title">Kandang Ready Live</div>
+              <div class="pillar-body">
+                Satu-satunya aqiqah di Malang dengan kandang sendiri 11×30m.
+                Pelanggan bisa datang, memilih kambing, dan menyaksikan proses
+                penyembelihan langsung.
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-num">02</div>
+              <div class="pillar-title">100% Syar'i Terverifikasi</div>
+              <div class="pillar-body">
+                Setiap hewan dipastikan memenuhi syarat ukuran, umur, dan
+                kesehatan. Bukan klaim — bisa dibuktikan langsung di kandang.
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-num">03</div>
+              <div class="pillar-title">20 Tahun Track Record</div>
+              <div class="pillar-body">
+                Supply chain matang, pengalaman ribuan pelanggan, dan jaringan
+                B2B yang kuat — fondasi kepercayaan yang tidak bisa dibeli oleh
+                pesaing baru.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- 02. COLOR PALETTE -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="section-dark" id="colors">
+      <div class="container">
+        <span class="section-tag">02 / Palet Warna</span>
+        <h2 class="section-title">
+          Tanamera <span class="accent">Aesthetic</span>
+        </h2>
+        <div class="rule-line"></div>
+        <p class="section-desc">
+          Tiga warna utama yang membentuk identitas visual SAE Aqiqah — dipilih
+          untuk menyampaikan eksklusivitas, keberanian, dan kesucian ibadah.
+        </p>
+
+        <div class="palette-grid">
+          <div class="swatch swatch-black">
+            <span class="swatch-name">ONYX BLACK</span>
+            <span class="swatch-hex">#0A0A0A</span>
+            <span class="swatch-desc">Eksklusivitas &amp; Premium</span>
+          </div>
+          <div class="swatch swatch-red">
+            <span class="swatch-name">CRIMSON RED</span>
+            <span class="swatch-hex">#C41E3A</span>
+            <span class="swatch-desc">Keberanian &amp; Vitalitas</span>
+          </div>
+          <div class="swatch swatch-white">
+            <span class="swatch-name">CRISP WHITE</span>
+            <span class="swatch-hex">#FFFFFF</span>
+            <span class="swatch-desc">Kemurnian &amp; Syar'i</span>
+          </div>
+        </div>
+
+        <!-- Color Usage Rules -->
+        <div class="grid-2">
+          <div>
+            <span class="section-tag" style="margin-bottom: 24px"
+              >Penggunaan Warna</span
+            >
+            <div class="usage-row">
+              <div class="usage-label">Background Utama</div>
+              <div class="usage-value">
+                Onyx Black — semua background utama konten, kemasan, dan media
+                digital
+              </div>
+            </div>
+            <div class="usage-row">
+              <div class="usage-label">Aksen &amp; Highlight</div>
+              <div class="usage-value">
+                Crimson Red — logo, CTA button, garis pembatas, elemen
+                highlight, segel kemasan
+              </div>
+            </div>
+            <div class="usage-row">
+              <div class="usage-label">Tipografi Utama</div>
+              <div class="usage-value">
+                Crisp White — semua teks di atas background hitam; jangan campur
+                dengan abu-abu gelap
+              </div>
+            </div>
+            <div class="usage-row">
+              <div class="usage-label">Warna Pendukung</div>
+              <div class="usage-value">
+                Gold #B8973A — elemen premium, tagline, detail dekoratif;
+                gunakan sparingly
+              </div>
+            </div>
+          </div>
+          <div>
+            <span class="section-tag" style="margin-bottom: 24px"
+              >Aturan Warna</span
+            >
+            <div class="do-dont">
+              <div class="do-block">
+                <span class="do-label yes">✓ Boleh</span>
+                <ul class="do-list">
+                  <li>Hitam sebagai background dominan</li>
+                  <li>Merah untuk aksen tunggal yang kuat</li>
+                  <li>Putih murni untuk teks kontras tinggi</li>
+                  <li>Gold untuk sentuhan premium</li>
+                  <li>High-contrast, moody photography</li>
+                </ul>
+              </div>
+              <div class="dont-block">
+                <span class="do-label no">✕ Dilarang</span>
+                <ul class="do-list dont-list">
+                  <li>Background putih atau terang</li>
+                  <li>Warna pastel atau earth tone</li>
+                  <li>Warna ramai / rainbow palette</li>
+                  <li>Merah + hijau / kombinasi noisy</li>
+                  <li>Filter foto warm kekuningan berlebih</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- 03. TYPOGRAPHY -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="section-darker" id="typography">
+      <div class="container">
+        <span class="section-tag">03 / Tipografi</span>
+        <h2 class="section-title">
+          Sistem <span class="accent">Tipografi</span>
+        </h2>
+        <div class="rule-line"></div>
+
+        <div class="typo-sample">
+          <div class="typo-meta">
+            <strong>Display / Hero</strong>
+            Bebas Neue<br />
+            All Caps · Tracking 0.1em<br />
+            Gunakan untuk: judul besar, nama brand, angka
+          </div>
+          <div
+            style="
+              font-family: &quot;Bebas Neue&quot;, sans-serif;
+              font-size: 72px;
+              color: var(--white);
+              letter-spacing: 0.05em;
+              line-height: 1;
+            "
+          >
+            SAE AQIQAH
+          </div>
+        </div>
+
+        <div class="typo-sample">
+          <div class="typo-meta">
+            <strong>Serif / Heading</strong>
+            Playfair Display<br />
+            Bold &amp; Italic · Natural Tracking<br />
+            Gunakan untuk: heading section, kalimat indah, tagline
+          </div>
+          <div
+            style="
+              font-family: &quot;Playfair Display&quot;, serif;
+              font-size: 40px;
+              color: var(--white);
+              font-style: italic;
+              line-height: 1.2;
+            "
+          >
+            "Sempurna Syariatnya,<br />Premium Sajiannya"
+          </div>
+        </div>
+
+        <div class="typo-sample">
+          <div class="typo-meta">
+            <strong>Body / Text</strong>
+            Cormorant Garamond<br />
+            Light 300 · 16–18px<br />
+            Gunakan untuk: paragraf, deskripsi, caption panjang
+          </div>
+          <div
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-size: 18px;
+              color: var(--white-muted);
+              line-height: 1.8;
+              max-width: 480px;
+            "
+          >
+            Selama dua dekade, dari lahan 11×30 meter di belakang Kampus UMM 3
+            Malang, keluarga Ny. Arie dan Tn. Yufi telah menjadi saksi dari
+            ribuan momen sakral keluarga Muslim.
+          </div>
+        </div>
+
+        <div class="typo-sample">
+          <div class="typo-meta">
+            <strong>Label / Meta</strong>
+            DM Mono<br />
+            Uppercase · Tracking 0.3em<br />
+            Gunakan untuk: label, tag, ukuran, info teknis
+          </div>
+          <div
+            style="
+              font-family: &quot;DM Mono&quot;, monospace;
+              font-size: 13px;
+              color: var(--red);
+              letter-spacing: 0.35em;
+              text-transform: uppercase;
+            "
+          >
+            BRAND GUIDELINE · MALANG · 2026
+          </div>
+        </div>
+
+        <!-- Social media typography note -->
+        <div class="card mt-32">
+          <div class="card-title">Tipografi untuk Media Sosial</div>
+          <div class="grid-3 mt-24">
+            <div>
+              <span
+                class="swatch-name"
+                style="
+                  font-family: &quot;Bebas Neue&quot;;
+                  font-size: 18px;
+                  color: var(--red);
+                  display: block;
+                  margin-bottom: 8px;
+                "
+                >Instagram / TikTok</span
+              >
+              <div class="card-body">
+                Heading: Bebas Neue bold<br />Caption: Cormorant Garamond
+                Regular<br />Hashtag: DM Mono lowercase<br />Font size minimal:
+                24pt untuk teks dalam visual
+              </div>
+            </div>
+            <div>
+              <span
+                class="swatch-name"
+                style="
+                  font-family: &quot;Bebas Neue&quot;;
+                  font-size: 18px;
+                  color: var(--gold);
+                  display: block;
+                  margin-bottom: 8px;
+                "
+                >WhatsApp / Facebook</span
+              >
+              <div class="card-body">
+                Pesan teks: Gunakan Bold untuk kata kunci<br />Gunakan emoji
+                yang relevan (🐑 ✅ 🔥)<br />Hindari all-caps berlebihan di teks
+                panjang<br />Paragraf pendek: maks 3 baris per blok
+              </div>
+            </div>
+            <div>
+              <span
+                class="swatch-name"
+                style="
+                  font-family: &quot;Bebas Neue&quot;;
+                  font-size: 18px;
+                  color: var(--white-muted);
+                  display: block;
+                  margin-bottom: 8px;
+                "
+                >Banner / X-Banner</span
+              >
+              <div class="card-body">
+                Hierarki: Brand Name → Tagline → Info<br />Jarak aman: 5% dari
+                tepi di semua sisi<br />Min readable size: 72pt untuk judul<br />Max
+                3 elemen tipografi per visual
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- 04. LOGO -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="section-dark" id="logo">
+      <div class="container">
+        <span class="section-tag">04 / Logo &amp; Identitas Visual</span>
+        <h2 class="section-title">
+          Logo <span class="accent">Guidelines</span>
+        </h2>
+        <div class="rule-line"></div>
+
+        <div class="grid-2 mb-48">
+          <!-- Logo on dark -->
+          <div>
+            <span
+              class="typo-meta"
+              style="
+                font-family: &quot;DM Mono&quot;, monospace;
+                font-size: 10px;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: var(--white-muted);
+                display: block;
+                margin-bottom: 12px;
+              "
+              >Versi Primer — Background Gelap</span
+            >
+            <div class="logo-zone">
+              <div class="logo-display">
+                <span class="sae"
+                  ><span style="color: var(--red)">S</span>AE</span
+                >
+                <span class="aqiqah">AQIQAH</span>
+                <span class="tagline-logo"
+                  >Sempurna Syariatnya · Premium Sajiannya</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Logo on light -->
+          <div>
+            <span
+              class="typo-meta"
+              style="
+                font-family: &quot;DM Mono&quot;, monospace;
+                font-size: 10px;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: var(--white-muted);
+                display: block;
+                margin-bottom: 12px;
+              "
+              >Versi Alternatif — Background Terang (terbatas)</span
+            >
+            <div class="logo-zone" style="background: #f5f5f5">
+              <div class="logo-display">
+                <span class="sae" style="color: #0a0a0a"
+                  ><span style="color: var(--red)">S</span>AE</span
+                >
+                <span class="aqiqah" style="color: #555">AQIQAH</span>
+                <span
+                  class="tagline-logo"
+                  style="color: var(--red); border-top-color: #ddd"
+                  >Sempurna Syariatnya · Premium Sajiannya</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Exclusion Zone -->
+        <div class="grid-2">
+          <div>
+            <span class="section-tag">Zona Eksklusif Logo</span>
+            <div class="card mt-16">
+              <div class="card-body">
+                <p style="margin-bottom: 16px">
+                  Jaga ruang kosong di sekeliling logo minimal
+                  <strong style="color: var(--red)">1× tinggi huruf "S"</strong>
+                  dari semua sisi. Tidak ada elemen lain yang boleh masuk ke
+                  zona ini.
+                </p>
+                <div
+                  style="
+                    border: 1px dashed rgba(196, 30, 58, 0.4);
+                    padding: 32px;
+                    text-align: center;
+                    position: relative;
+                    margin-top: 16px;
+                  "
+                >
+                  <div
+                    style="
+                      position: absolute;
+                      top: 8px;
+                      left: 8px;
+                      font-family: &quot;DM Mono&quot;, monospace;
+                      font-size: 9px;
+                      color: var(--red);
+                      letter-spacing: 0.2em;
+                    "
+                  >
+                    CLEAR ZONE
+                  </div>
+                  <div
+                    style="
+                      font-family: &quot;Bebas Neue&quot;;
+                      font-size: 36px;
+                      color: var(--white);
+                      letter-spacing: 0.1em;
+                    "
+                  >
+                    <span style="color: var(--red)">S</span>AE AQIQAH
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <span class="section-tag">Aturan Penggunaan Logo</span>
+            <div class="do-dont mt-16">
+              <div class="do-block">
+                <span class="do-label yes">✓ Boleh</span>
+                <ul class="do-list">
+                  <li>Logo putih di background hitam</li>
+                  <li>Logo hitam di background putih</li>
+                  <li>Satu warna merah untuk aksen "S"</li>
+                  <li>Resize proporsional (lock ratio)</li>
+                  <li>Min size digital: 120px lebar</li>
+                </ul>
+              </div>
+              <div class="dont-block">
+                <span class="do-label no">✕ Dilarang</span>
+                <ul class="do-list dont-list">
+                  <li>Meregangkan atau memipihkan logo</li>
+                  <li>Mengganti warna sembarangan</li>
+                  <li>Menambahkan shadow atau outline</li>
+                  <li>Logo di atas foto tanpa overlay</li>
+                  <li>Rotasi logo</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- 05. DIGITAL CHANNELS -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="section-darker" id="digital">
+      <div class="container">
+        <span class="section-tag">05 / Panduan Channel Digital</span>
+        <h2 class="section-title">
+          Platform <span class="accent">Guide</span>
+        </h2>
+        <div class="rule-line"></div>
+        <p class="section-desc">
+          Setiap platform memiliki karakter unik. Gunakan panduan ini untuk
+          menjaga konsistensi brand di semua touchpoint digital.
+        </p>
+
+        <!-- INSTAGRAM -->
+        <div class="media-mockup mb-48">
+          <div class="mockup-header">
+            <span>📷 &nbsp; INSTAGRAM</span>
+            <span
+              style="
+                font-family: &quot;DM Mono&quot;, monospace;
+                font-size: 10px;
+                letter-spacing: 0.15em;
+              "
+              >@saeaqiqah</span
+            >
+          </div>
+          <div class="mockup-body">
+            <div class="grid-3">
+              <div>
+                <span class="mockup-spec">Username</span>
+                <span class="mockup-val">@saeaqiqah</span>
+                <span class="mockup-spec">Bio Format</span>
+                <span class="mockup-val" style="font-size: 13px"
+                  >🐑 Premium Syar'i Aqiqah &amp; Meat Specialist<br />📍
+                  Malang, Jawa Timur<br />✅ Kandang sendiri · 20 tahun
+                  pengalaman<br />📲 Order via link di bio</span
+                >
+              </div>
+              <div>
+                <span class="mockup-spec">Feed Aesthetic</span>
+                <span class="mockup-val"
+                  >Moody &amp; High Contrast — background hitam, lighting
+                  dramatis, tone merah-gelap. Alternasi: foto produk · video BTS
+                  kandang · konten edukatif</span
+                >
+                <span class="mockup-spec">Frekuensi Feed</span>
+                <span class="mockup-val"
+                  >2–3 kali per minggu (Reels + Carousel)</span
+                >
+              </div>
+              <div>
+                <span class="mockup-spec">Reels</span>
+                <span class="mockup-val"
+                  >Rasio 9:16 · 1080×1920px · Durasi 15–60 detik · Hook di 3
+                  detik pertama</span
+                >
+                <span class="mockup-spec">Stories</span>
+                <span class="mockup-val"
+                  >3–5 stories per hari · Gunakan template brand · Poll &amp;
+                  Q&A untuk engagement</span
+                >
+                <span class="mockup-spec">Highlight Cover</span>
+                <span class="mockup-val"
+                  >Background merah + ikon putih minimalis. Label: Menu, Proses,
+                  Testimoni, Qurban, Info</span
+                >
+              </div>
+            </div>
+
+            <div class="do-dont mt-24">
+              <div class="do-block">
+                <span class="do-label yes">✓ Konten yang Dipublikasikan</span>
+                <ul class="do-list">
+                  <li>Video BTS kandang &amp; penyembelihan</li>
+                  <li>Foto daging premium close-up moody</li>
+                  <li>Unboxing kotak hitam premium</li>
+                  <li>Edukasi syarat sah aqiqah/qurban</li>
+                  <li>Testimoni pelanggan (video &amp; teks)</li>
+                  <li>Behind-the-scenes tim operasional</li>
+                </ul>
+              </div>
+              <div class="dont-block">
+                <span class="do-label no">✕ Hindari</span>
+                <ul class="do-list dont-list">
+                  <li>Foto blur atau pencahayaan buruk</li>
+                  <li>Visual desain ramai &amp; penuh teks</li>
+                  <li>Repost tanpa branding ulang</li>
+                  <li>Foto makanan biasa tanpa styling</li>
+                  <li>Caption lebih dari 5 paragraf tanpa line break</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TIKTOK -->
+        <div class="media-mockup mb-48">
+          <div
+            class="mockup-header"
+            style="
+              background: var(--black-card);
+              border-bottom: 1px solid var(--black-border);
+            "
+          >
+            <span>🎵 &nbsp; TIKTOK</span>
+            <span
+              style="
+                font-family: &quot;DM Mono&quot;, monospace;
+                font-size: 10px;
+                letter-spacing: 0.15em;
+              "
+              >@saeaqiqah</span
+            >
+          </div>
+          <div class="mockup-body">
+            <div class="grid-3">
+              <div>
+                <span class="mockup-spec">Format Video</span>
+                <span class="mockup-val"
+                  >9:16 Vertikal · 1080×1920px · 15–60 detik optimal · Max 3
+                  menit untuk edukasi</span
+                >
+                <span class="mockup-spec">Frekuensi</span>
+                <span class="mockup-val"
+                  >1 video per hari (4 Qurban + 3 Aqiqah per minggu)</span
+                >
+              </div>
+              <div>
+                <span class="mockup-spec">Hook Strategy</span>
+                <span class="mockup-val"
+                  >3 detik pertama harus langsung kontroversial atau
+                  mengejutkan: "Kenapa aqiqah kamu mungkin tidak sah?" atau
+                  "Lihat kandang kami vs. pesaing"</span
+                >
+                <span class="mockup-spec">Caption TikTok</span>
+                <span class="mockup-val"
+                  >Maks 150 karakter + 3–5 hashtag relevan. Ajakan aksi yang
+                  jelas di akhir.</span
+                >
+              </div>
+              <div>
+                <span class="mockup-spec">3 Pilar Konten</span>
+                <span class="mockup-val" style="font-size: 13px">
+                  <strong style="color: var(--red)"
+                    >Authority &amp; Trust</strong
+                  ><br />BTS kandang, proses transparan, tim elegan<br /><br />
+                  <strong style="color: var(--gold)">Syar'i Education</strong
+                  ><br />Cara cek gigi kambing, syarat sah qurban<br /><br />
+                  <strong style="color: var(--white)"
+                    >Appetite &amp; Prestige</strong
+                  ><br />Food cinematic, unboxing kotak premium
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FACEBOOK -->
+        <div class="media-mockup mb-48">
+          <div class="mockup-header" style="background: #1a1a2e">
+            <span>📘 &nbsp; FACEBOOK</span>
+            <span
+              style="
+                font-family: &quot;DM Mono&quot;, monospace;
+                font-size: 10px;
+                letter-spacing: 0.15em;
+              "
+              >SAE Aqiqah</span
+            >
+          </div>
+          <div class="mockup-body">
+            <div class="grid-2">
+              <div>
+                <span class="mockup-spec">Cover Photo</span>
+                <span class="mockup-val"
+                  >820×312px · Background hitam dengan logo SAE Aqiqah centered
+                  · Tagline di bawah logo</span
+                >
+                <span class="mockup-spec">Profile Picture</span>
+                <span class="mockup-val"
+                  >170×170px · Logo SAE Aqiqah di atas background merah atau
+                  hitam. Tidak ada foto personal.</span
+                >
+                <span class="mockup-spec">Frekuensi Posting</span>
+                <span class="mockup-val"
+                  >4–5 kali per minggu · Sinkron dengan konten Instagram
+                  (repurpose)</span
+                >
+              </div>
+              <div>
+                <span class="mockup-spec">Jenis Konten</span>
+                <span class="mockup-val"
+                  >Video (prioritas utama karena FB algorithm) · Foto produk ·
+                  Event Qurban · Testimoni · Share artikel edukasi halal</span
+                >
+                <span class="mockup-spec">Meta Ads</span>
+                <span class="mockup-val"
+                  >Click-to-WhatsApp objective · Target: Malang Raya usia 25–45
+                  · Interest: Parenting Islam, Qurban, Halal Food</span
+                >
+                <span class="mockup-spec">Budget Split</span>
+                <span class="mockup-val"
+                  >70% untuk campaign Qurban (musiman) · 30% untuk Aqiqah
+                  always-on</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WHATSAPP -->
+        <div class="media-mockup mb-48">
+          <div class="mockup-header" style="background: #075e54">
+            <span>💬 &nbsp; WHATSAPP BUSINESS</span>
+            <span
+              style="
+                font-family: &quot;DM Mono&quot;, monospace;
+                font-size: 10px;
+                letter-spacing: 0.15em;
+              "
+              >0822-3061-1299</span
+            >
+          </div>
+          <div class="mockup-body">
+            <div class="grid-3">
+              <div>
+                <span class="mockup-spec">Foto Profil</span>
+                <span class="mockup-val"
+                  >Logo SAE Aqiqah di background hitam. Ukuran 500×500px
+                  minimum.</span
+                >
+                <span class="mockup-spec">Nama Bisnis</span>
+                <span class="mockup-val">SAE Aqiqah | Malang</span>
+                <span class="mockup-spec">Status WA</span>
+                <span class="mockup-val"
+                  >🐑 Aqiqah &amp; Qurban Syar'i · Kandang Sendiri · Malang Raya
+                  · Order: wa.me/6282230611299</span
+                >
+              </div>
+              <div>
+                <span class="mockup-spec">Pesan Sambutan Otomatis</span>
+                <span
+                  class="mockup-val"
+                  style="
+                    font-size: 13px;
+                    font-style: italic;
+                    color: var(--white-dim);
+                  "
+                  >"Assalamu'alaikum, selamat datang di SAE Aqiqah 🐑<br /><br />Terima
+                  kasih telah menghubungi kami. Tim kami akan segera merespons
+                  dalam 5–15 menit.<br /><br />Sementara itu, silakan beritahu
+                  kami:<br />1. Nama lengkap &amp; nama bayi<br />2. Tanggal
+                  aqiqah yang diinginkan<br />3. Kota pengiriman<br /><br />Barakallah
+                  🙏"</span
+                >
+              </div>
+              <div>
+                <span class="mockup-spec">Alur CS</span>
+                <span class="mockup-val" style="font-size: 13px">
+                  1. Auto-reply sambutan<br />
+                  2. Kirim katalog PDF premium<br />
+                  3. Tawarkan video call ke kandang<br />
+                  4. Closing: DP atau pelunasan<br /><br />
+                  <strong style="color: var(--red)"
+                    >Response time target: &lt; 15 menit di jam kerja</strong
+                  >
+                </span>
+                <span class="mockup-spec">Katalog WA</span>
+                <span class="mockup-val"
+                  >Foto produk high-quality + harga + deskripsi singkat. Update
+                  setiap perubahan harga.</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="card mt-24"
+              style="
+                background: rgba(7, 94, 84, 0.1);
+                border-color: rgba(7, 94, 84, 0.4);
+              "
+            >
+              <div class="card-title">Tone of Voice WhatsApp</div>
+              <div class="card-body">
+                Hangat dan Hormat — gunakan sapaan Islami (Assalamu'alaikum,
+                Barakallah, InsyaAllah). Edukatif bukan menjual. Jangan terlalu
+                formal, tetapi tetap profesional. Gunakan emoji relevan
+                secukupnya (🐑 ✅ 📦 🙏). Hindari CAPSLOCK berlebihan.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- X (TWITTER) -->
+        <div class="media-mockup">
+          <div
+            class="mockup-header"
+            style="
+              background: #0a0a0a;
+              border-bottom: 1px solid var(--black-border);
+            "
+          >
+            <span>✕ &nbsp; X (TWITTER)</span>
+            <span
+              style="
+                font-family: &quot;DM Mono&quot;, monospace;
+                font-size: 10px;
+                letter-spacing: 0.15em;
+              "
+              >@saeaqiqah</span
+            >
+          </div>
+          <div class="mockup-body">
+            <div class="grid-2">
+              <div>
+                <span class="mockup-spec">Profil &amp; Header</span>
+                <span class="mockup-val"
+                  >Header: 1500×500px · Background hitam + logo + tagline<br />Profile
+                  picture: Logo 400×400px</span
+                >
+                <span class="mockup-spec">Bio X</span>
+                <span class="mockup-val"
+                  >Premium Syar'i Aqiqah &amp; Meat Specialist | Malang 🐑 |
+                  Kandang sendiri 20 tahun | 📞 0822-3061-1299</span
+                >
+              </div>
+              <div>
+                <span class="mockup-spec">Konten X</span>
+                <span class="mockup-val"
+                  >Kutipan edukasi Islam · Fakta aqiqah · Tip memilih hewan
+                  kurban yang sah · Thread edukatif setiap Jumat</span
+                >
+                <span class="mockup-spec">Frekuensi</span>
+                <span class="mockup-val"
+                  >1–2 tweet per hari · Retweet konten relevan · Engage dengan
+                  komunitas parenting Muslim</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- 06. PHYSICAL MEDIA -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="section-dark" id="physical">
+      <div class="container">
+        <span class="section-tag">06 / Media Promosi Fisik</span>
+        <h2 class="section-title">
+          Identitas <span class="accent">Offline</span>
+        </h2>
+        <div class="rule-line"></div>
+        <p class="section-desc">
+          Semua materi promosi fisik harus mencerminkan identitas premium brand
+          — konsisten dalam warna, tipografi, dan art direction dengan presence
+          digital.
+        </p>
+
+        <!-- BANNER -->
+        <div class="media-mockup mb-32">
+          <div class="mockup-header">
+            <span>🏷 &nbsp; BANNER HORIZONTAL</span>
+            <span
+              style="
+                font-family: &quot;DM Mono&quot;, monospace;
+                font-size: 10px;
+                letter-spacing: 0.15em;
+              "
+              >Outdoor Promotion</span
+            >
+          </div>
+          <div class="mockup-body">
+            <div class="grid-2">
+              <div>
+                <span class="mockup-spec">Ukuran Standar</span>
+                <span class="mockup-val"
+                  >300×100 cm &nbsp;|&nbsp; 200×80 cm &nbsp;|&nbsp; 100×60
+                  cm</span
+                >
+                <span class="mockup-spec">Resolusi</span>
+                <span class="mockup-val"
+                  >Min 150 DPI untuk cetak outdoor. File format: PDF atau AI
+                  vector.</span
+                >
+                <span class="mockup-spec">Material</span>
+                <span class="mockup-val"
+                  >Frontlite 380gsm (outdoor) · Albatros 260gsm (indoor)</span
+                >
+                <span class="mockup-spec">Background</span>
+                <span class="mockup-val"
+                  >Onyx Black wajib. Foto produk sebagai aksen, bukan background
+                  penuh.</span
+                >
+              </div>
+              <div>
+                <span class="mockup-spec">Hierarki Konten</span>
+                <span class="mockup-val" style="font-size: 13px">
+                  <strong style="color: var(--red)">1. Brand Name</strong> — SAE
+                  AQIQAH (paling dominan)<br />
+                  <strong style="color: var(--gold)">2. Tagline</strong> —
+                  "Sempurna Syariatnya, Premium Sajiannya"<br />
+                  <strong style="color: var(--white)">3. Pesan Utama</strong> —
+                  1 kalimat kuat (misal: "Kandang Sendiri · 100% Syar'i")<br />
+                  <strong style="color: var(--white-muted)">4. CTA</strong> —
+                  Nomor WA / QR Code
+                </span>
+                <span class="mockup-spec">Zona Aman</span>
+                <span class="mockup-val"
+                  >Minimal 5% dari semua sisi sebagai padding. Logo tidak boleh
+                  terlalu ke tepi.</span
+                >
+              </div>
+            </div>
+
+            <!-- Banner mockup visual -->
+            <div
+              style="
+                background: var(--black);
+                border: 1px solid var(--black-border);
+                padding: 32px 48px;
+                margin-top: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                overflow: hidden;
+              "
+            >
+              <div
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  bottom: 0;
+                  width: 6px;
+                  background: var(--red);
+                "
+              ></div>
+              <div
+                style="
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  bottom: 0;
+                  width: 6px;
+                  background: var(--red);
+                "
+              ></div>
+              <div>
+                <div
+                  style="
+                    font-family: &quot;Bebas Neue&quot;;
+                    font-size: 52px;
+                    color: var(--white);
+                    letter-spacing: 0.08em;
+                    line-height: 1;
+                  "
+                >
+                  <span style="color: var(--red)">SAE</span> AQIQAH
+                </div>
+                <div
+                  style="
+                    font-family: &quot;Cormorant Garamond&quot;;
+                    font-style: italic;
+                    font-size: 16px;
+                    color: var(--gold-light);
+                    margin-top: 4px;
+                  "
+                >
+                  Sempurna Syariatnya, Premium Sajiannya
+                </div>
+              </div>
+              <div style="text-align: center; padding: 0 32px">
+                <div
+                  style="
+                    font-family: &quot;Bebas Neue&quot;;
+                    font-size: 22px;
+                    color: var(--white);
+                    letter-spacing: 0.15em;
+                  "
+                >
+                  Kandang Sendiri · 100% Syar'i
+                </div>
+                <div
+                  style="
+                    font-family: &quot;Cormorant Garamond&quot;;
+                    font-size: 14px;
+                    color: var(--white-muted);
+                    margin-top: 4px;
+                  "
+                >
+                  Pilih kambing sendiri · Saksikan langsung · 20 tahun
+                  pengalaman
+                </div>
+              </div>
+              <div style="text-align: right">
+                <div
+                  style="
+                    font-family: &quot;DM Mono&quot;;
+                    font-size: 10px;
+                    letter-spacing: 0.2em;
+                    color: var(--red);
+                    text-transform: uppercase;
+                    margin-bottom: 8px;
+                  "
+                >
+                  Order Sekarang
+                </div>
+                <div
+                  style="
+                    font-family: &quot;Bebas Neue&quot;;
+                    font-size: 28px;
+                    color: var(--white);
+                    letter-spacing: 0.05em;
+                  "
+                >
+                  0822-3061-1299
+                </div>
+                <div
+                  style="
+                    font-family: &quot;DM Mono&quot;;
+                    font-size: 9px;
+                    color: var(--gray);
+                    letter-spacing: 0.15em;
+                    text-transform: uppercase;
+                    margin-top: 4px;
+                  "
+                >
+                  WhatsApp · saeaqiqah.com
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                font-family: &quot;DM Mono&quot;;
+                font-size: 9px;
+                color: var(--gray);
+                letter-spacing: 0.15em;
+                text-transform: uppercase;
+                margin-top: 8px;
+              "
+            >
+              ↑ Contoh layout referensi banner. Gunakan foto produk asli untuk
+              versi final.
+            </div>
+          </div>
+        </div>
+
+        <!-- X BANNER -->
+        <div class="grid-2 mb-32">
+          <div class="media-mockup">
+            <div class="mockup-header">
+              <span>📌 &nbsp; X-BANNER / ROLL-UP</span>
+            </div>
+            <div class="mockup-body">
+              <span class="mockup-spec">Ukuran Standar</span>
+              <span class="mockup-val">60×160 cm &nbsp;|&nbsp; 80×200 cm</span>
+              <span class="mockup-spec">Resolusi</span>
+              <span class="mockup-val"
+                >Min 200 DPI. File: PDF vector atau AI.</span
+              >
+              <span class="mockup-spec">Tata Letak (Atas ke Bawah)</span>
+              <span class="mockup-val" style="font-size: 13px">
+                <strong style="color: var(--red)">Area 1 (30%)</strong> — Logo
+                SAE Aqiqah + strip merah<br />
+                <strong style="color: var(--gold)">Area 2 (40%)</strong> — Foto
+                produk / kambing premium<br />
+                <strong style="color: var(--white)">Area 3 (20%)</strong> —
+                Pesan kunci + bullet keunggulan<br />
+                <strong style="color: var(--white-muted)">Area 4 (10%)</strong>
+                — Kontak + QR Code
+              </span>
+              <span class="mockup-spec">Material</span>
+              <span class="mockup-val"
+                >Vinyl 440gsm (Outdoor) · PVC Flex (Indoor)</span
+              >
+
+              <!-- X Banner visual mockup -->
+              <div
+                style="
+                  width: 100px;
+                  margin: 24px auto;
+                  background: var(--black);
+                  border: 1px solid var(--black-border);
+                  overflow: hidden;
+                "
+              >
+                <div
+                  style="
+                    background: var(--red);
+                    padding: 10px 8px;
+                    text-align: center;
+                  "
+                >
+                  <div
+                    style="
+                      font-family: &quot;Bebas Neue&quot;;
+                      font-size: 16px;
+                      color: var(--white);
+                      letter-spacing: 0.1em;
+                    "
+                  >
+                    SAE AQIQAH
+                  </div>
+                  <div
+                    style="
+                      font-family: &quot;DM Mono&quot;;
+                      font-size: 7px;
+                      color: rgba(255, 255, 255, 0.7);
+                      letter-spacing: 0.15em;
+                      text-transform: uppercase;
+                    "
+                  >
+                    Malang · 2026
+                  </div>
+                </div>
+                <div
+                  style="
+                    height: 60px;
+                    background: linear-gradient(135deg, #1a0a0a, #0a0a0a);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <div
+                    style="
+                      font-family: &quot;Cormorant Garamond&quot;;
+                      font-style: italic;
+                      font-size: 8px;
+                      color: var(--white-muted);
+                      text-align: center;
+                      padding: 0 8px;
+                      line-height: 1.4;
+                    "
+                  >
+                    [Foto Produk<br />Premium]
+                  </div>
+                </div>
+                <div style="padding: 10px 8px">
+                  <div
+                    style="
+                      font-family: &quot;Bebas Neue&quot;;
+                      font-size: 9px;
+                      color: var(--white);
+                      letter-spacing: 0.1em;
+                      margin-bottom: 6px;
+                    "
+                  >
+                    KEUNGGULAN KAMI
+                  </div>
+                  <div
+                    style="
+                      font-family: &quot;DM Mono&quot;;
+                      font-size: 6px;
+                      color: var(--white-muted);
+                      line-height: 1.8;
+                      letter-spacing: 0.05em;
+                    "
+                  >
+                    ✓ Kandang 11×30m Sendiri<br />✓ 100% Syar'i Terverifikasi<br />✓
+                    20 Tahun Pengalaman<br />✓ Proses Terbuka &amp; Jujur
+                  </div>
+                </div>
+                <div
+                  style="
+                    background: var(--gold);
+                    padding: 8px;
+                    text-align: center;
+                  "
+                >
+                  <div
+                    style="
+                      font-family: &quot;Bebas Neue&quot;;
+                      font-size: 8px;
+                      color: var(--black);
+                      letter-spacing: 0.1em;
+                    "
+                  >
+                    0822-3061-1299
+                  </div>
+                  <div
+                    style="
+                      font-family: &quot;DM Mono&quot;;
+                      font-size: 6px;
+                      color: rgba(0, 0, 0, 0.6);
+                      letter-spacing: 0.1em;
+                      text-transform: uppercase;
+                    "
+                  >
+                    WhatsApp Sekarang
+                  </div>
+                </div>
+              </div>
+              <div
+                style="
+                  font-family: &quot;DM Mono&quot;;
+                  font-size: 9px;
+                  color: var(--gray);
+                  letter-spacing: 0.15em;
+                  text-transform: uppercase;
+                  text-align: center;
+                  margin-top: 8px;
+                "
+              >
+                Mockup Referensi X-Banner
+              </div>
+            </div>
+          </div>
+
+          <!-- LABEL KOTAK -->
+          <div class="media-mockup">
+            <div class="mockup-header">
+              <span>🏷 &nbsp; LABEL KOTAK MAKAN</span>
+            </div>
+            <div class="mockup-body">
+              <span class="mockup-spec">Konsep</span>
+              <span class="mockup-val"
+                >Label berbentuk pita/strip yang dilingkarkan mengitari kotak
+                makan hitam doff. Berfungsi sebagai segel sekaligus identitas
+                brand.</span
+              >
+              <span class="mockup-spec">Ukuran Label Strip</span>
+              <span class="mockup-val"
+                >Lebar: 4–5 cm · Panjang: menyesuaikan keliling kotak (±60 cm
+                untuk kotak standar)</span
+              >
+              <span class="mockup-spec">Elemen Wajib pada Label</span>
+              <span class="mockup-val" style="font-size: 13px"
+                >Logo SAE Aqiqah · Nama penerima (custom per order) · Nama
+                bayi/momen · Tagline brand · Kontak WhatsApp · Tanggal
+                sajian</span
+              >
+              <span class="mockup-spec">Cetak</span>
+              <span class="mockup-val"
+                >Art paper 260gsm laminasi doff · Tinta full color · Potong
+                custom shape (rounded corner)</span
+              >
+
+              <!-- Label visual -->
+              <div
+                style="
+                  margin-top: 24px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  gap: 16px;
+                "
+              >
+                <div
+                  style="
+                    width: 100%;
+                    max-width: 320px;
+                    background: var(--black);
+                    border: 2px solid var(--red);
+                    overflow: hidden;
+                    border-radius: 4px;
+                  "
+                >
+                  <div
+                    style="
+                      background: var(--red);
+                      padding: 8px 16px;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                    "
+                  >
+                    <span
+                      style="
+                        font-family: &quot;Bebas Neue&quot;;
+                        font-size: 12px;
+                        letter-spacing: 0.2em;
+                        color: var(--white);
+                      "
+                      >SAE AQIQAH</span
+                    >
+                    <span
+                      style="
+                        font-family: &quot;DM Mono&quot;;
+                        font-size: 8px;
+                        letter-spacing: 0.15em;
+                        color: rgba(255, 255, 255, 0.7);
+                        text-transform: uppercase;
+                      "
+                      >Malang · Syar'i</span
+                    >
+                  </div>
+                  <div
+                    style="
+                      padding: 16px 20px;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                    "
+                  >
+                    <div>
+                      <div
+                        style="
+                          font-family: &quot;DM Mono&quot;;
+                          font-size: 8px;
+                          letter-spacing: 0.2em;
+                          color: var(--gray);
+                          text-transform: uppercase;
+                          margin-bottom: 4px;
+                        "
+                      >
+                        Aqiqah Untuk
+                      </div>
+                      <div
+                        style="
+                          font-family: &quot;Playfair Display&quot;;
+                          font-size: 16px;
+                          color: var(--white);
+                          font-style: italic;
+                        "
+                      >
+                        Lavanya Almahyra Isvara
+                      </div>
+                      <div
+                        style="
+                          font-family: &quot;DM Mono&quot;;
+                          font-size: 8px;
+                          letter-spacing: 0.1em;
+                          color: var(--white-muted);
+                          margin-top: 4px;
+                        "
+                      >
+                        22 Mei 2026 · Putra Pertama
+                      </div>
+                    </div>
+                    <div style="text-align: right">
+                      <div
+                        style="
+                          font-family: &quot;DM Mono&quot;;
+                          font-size: 7px;
+                          letter-spacing: 0.1em;
+                          color: var(--gray);
+                          text-transform: uppercase;
+                        "
+                      >
+                        @saeaqiqah
+                      </div>
+                      <div
+                        style="
+                          font-family: &quot;DM Mono&quot;;
+                          font-size: 7px;
+                          letter-spacing: 0.1em;
+                          color: var(--gray);
+                        "
+                      >
+                        saeaqiqah.com
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      background: var(--gold);
+                      padding: 6px 16px;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                    "
+                  >
+                    <span
+                      style="
+                        font-family: &quot;Bebas Neue&quot;;
+                        font-size: 11px;
+                        letter-spacing: 0.15em;
+                        color: var(--black);
+                      "
+                      >SYUKUR · BERKAH · BERBAGI</span
+                    >
+                    <span
+                      style="
+                        font-family: &quot;DM Mono&quot;;
+                        font-size: 7px;
+                        color: rgba(0, 0, 0, 0.6);
+                      "
+                      >0822-3061-1299</span
+                    >
+                  </div>
+                </div>
+                <div
+                  style="
+                    font-family: &quot;DM Mono&quot;;
+                    font-size: 9px;
+                    color: var(--gray);
+                    letter-spacing: 0.15em;
+                    text-transform: uppercase;
+                  "
+                >
+                  Mockup Label Strip — Nama &amp; Tanggal Bisa Dikustomisasi
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PACKAGING -->
+        <div class="media-mockup">
+          <div class="mockup-header">
+            <span>📦 &nbsp; KEMASAN &amp; PACKAGING</span>
+          </div>
+          <div class="mockup-body">
+            <div class="grid-3">
+              <div>
+                <span class="mockup-spec">Kotak Nasi / Makan</span>
+                <span class="mockup-val"
+                  >Material: Kardus doff hitam · Label segel merah di sisi ·
+                  Tissue berwrap hitam di dalam</span
+                >
+                <span class="mockup-spec">Ukuran</span>
+                <span class="mockup-val"
+                  >L: 25×20×8 cm (standar) · XL: 30×25×10 cm (paket
+                  lengkap)</span
+                >
+              </div>
+              <div>
+                <span class="mockup-spec">Kantong Plastik</span>
+                <span class="mockup-val"
+                  >Hitam doff dengan sablon putih · Logo SAE Aqiqah + tagline ·
+                  Handle standar</span
+                >
+                <span class="mockup-spec">Kertas Pembungkus Daging</span>
+                <span class="mockup-val"
+                  >Kertas putih food-grade dengan pola watermark logo SAE Aqiqah
+                  abu-abu muda</span
+                >
+              </div>
+              <div>
+                <span class="mockup-spec">Stiker Segel</span>
+                <span class="mockup-val"
+                  >Lingkaran diameter 4cm · Background merah · Logo SAE putih ·
+                  "SYAR'I &amp; AMANAH" · Anti-buka (tamper-evident)</span
+                >
+                <span class="mockup-spec">Seragam Tim</span>
+                <span class="mockup-val"
+                  >Baju hitam solid + apron kanvas hitam · Bordir logo SAE
+                  Aqiqah merah di dada kiri</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- 07. TONE OF VOICE -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="section-darker" id="voice">
+      <div class="container">
+        <span class="section-tag">07 / Tone of Voice &amp; Copywriting</span>
+        <h2 class="section-title">Suara <span class="accent">Brand</span></h2>
+        <div class="rule-line"></div>
+
+        <div class="grid-2 mb-48">
+          <div>
+            <p class="section-desc" style="margin-bottom: 32px">
+              SAE Aqiqah berbicara dengan suara yang hangat, hormat, dan penuh
+              otoritas. Seperti seorang guru agama yang juga ahli di bidangnya —
+              terpercaya, tidak menggurui.
+            </p>
+
+            <div style="margin-bottom: 24px">
+              <span class="section-tag" style="margin-bottom: 12px"
+                >Karakter Brand Voice</span
+              >
+              <div
+                style="
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 8px;
+                  margin-top: 12px;
+                "
+              >
+                <span class="tone-tag">Hangat</span>
+                <span class="tone-tag">Hormat</span>
+                <span class="tone-tag">Edukatif</span>
+                <span class="tone-tag">Otoritatif</span>
+                <span class="tone-tag">Islami</span>
+                <span class="tone-tag">Jujur</span>
+                <span class="tone-tag">Premium</span>
+                <span class="tone-tag">Transparan</span>
+              </div>
+            </div>
+
+            <div class="quote-block">
+              <p class="quote-text">
+                Rumus Iklan SAE Aqiqah:<br /><strong
+                  >Problem → Insight → Solusi → Bukti → CTA</strong
+                >
+              </p>
+              <span class="quote-source">Copywriting Framework</span>
+            </div>
+          </div>
+
+          <div>
+            <span class="section-tag" style="margin-bottom: 24px"
+              >Kata Wajib &amp; Terlarang</span
+            >
+            <div class="do-dont">
+              <div class="do-block">
+                <span class="do-label yes">✓ Selalu Gunakan</span>
+                <ul class="do-list">
+                  <li>Syar'i, amanah, terpercaya</li>
+                  <li>Terbuka, pilih sendiri, saksikan langsung</li>
+                  <li>20 tahun pengalaman</li>
+                  <li>Kandang sendiri, Ready Live</li>
+                  <li>Ketenangan hati, ibadah yang sah</li>
+                  <li>Transparan, higienis, segar, premium</li>
+                  <li>InsyaAllah, Barakallah, Alhamdulillah</li>
+                </ul>
+              </div>
+              <div class="dont-block">
+                <span class="do-label no">✕ Jangan Pernah</span>
+                <ul class="do-list dont-list">
+                  <li>"Murah" → ganti: "kompetitif"</li>
+                  <li>Menyebut pesaing secara negatif</li>
+                  <li>Klaim tanpa data ("terbaik se-Indonesia")</li>
+                  <li>Bahasa yang meragukan keabsahan pesaing</li>
+                  <li>Kata-kata sensasional berlebihan</li>
+                  <li>Emoji yang tidak relevan atau berlebihan</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Example caption -->
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-title">Contoh Caption Instagram</div>
+            <div
+              class="card-body"
+              style="
+                font-family: &quot;Cormorant Garamond&quot;, serif;
+                font-size: 16px;
+                line-height: 1.9;
+                color: var(--white-dim);
+                margin-top: 16px;
+                font-style: italic;
+              "
+            >
+              "Tahukah Bapak/Ibu? Salah satu syarat sah aqiqah yang sering
+              terlewat adalah usia kambing — minimal 1 tahun untuk domba, dan 2
+              tahun untuk kambing jawa.<br /><br />
+              Di SAE Aqiqah, kami tidak hanya menjanjikan — kami mempersilakan
+              Bapak/Ibu datang langsung, pilih sendiri hewannya, dan saksikan
+              prosesnya.<br /><br />
+              Karena ibadah Anda layak mendapatkan yang terbaik 🐑✅<br /><br />
+              📲 Order: wa.me/6282230611299<br />
+              📍 Jl. Raya Ketangi No. 60, Tegalgondo, Malang<br /><br />
+              #aqiqahmalang #aqiqahsyari #saeaqiqah #qurbanmalang
+              #aqiqahpremium"
+            </div>
+          </div>
+          <div class="card card-gold">
+            <div class="card-title">Contoh Pesan WhatsApp Promo</div>
+            <div
+              class="card-body"
+              style="
+                font-family: &quot;Cormorant Garamond&quot;, serif;
+                font-size: 16px;
+                line-height: 1.9;
+                color: var(--white-dim);
+                margin-top: 16px;
+                font-style: italic;
+              "
+            >
+              "Assalamu'alaikum, Bapak/Ibu yang kami hormati 🙏<br /><br />
+              Alhamdulillah, musim Qurban 1447H sudah di depan mata. SAE Aqiqah
+              membuka pendaftaran hewan qurban pilihan — kambing dan domba
+              jantan siap kurban, 100% syar'i, dari kandang sendiri kami seluas
+              11×30m.<br /><br />
+              ✅ Pilih sendiri hewan Anda<br />
+              ✅ Saksikan proses penyembelihan<br />
+              ✅ Pengiriman daging ke seluruh Malang Raya<br /><br />
+              Slot terbatas. Hubungi kami sekarang untuk reservasi 🐑<br /><br />
+              Barakallah fiikum 🤲"
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- 08. QUICK REFERENCE -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="section-dark">
+      <div class="container">
+        <span class="section-tag">08 / Quick Reference</span>
+        <h2 class="section-title">
+          Ringkasan <span class="accent">Panduan</span>
+        </h2>
+        <div class="rule-line"></div>
+
+        <div class="grid-4">
+          <div class="card" style="padding: 24px">
+            <div class="card-title" style="font-size: 14px">WARNA UTAMA</div>
+            <div style="display: flex; gap: 6px; margin: 12px 0">
+              <div
+                style="
+                  width: 32px;
+                  height: 32px;
+                  background: #0a0a0a;
+                  border: 1px solid #333;
+                  border-radius: 4px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 32px;
+                  height: 32px;
+                  background: #c41e3a;
+                  border-radius: 4px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 32px;
+                  height: 32px;
+                  background: #ffffff;
+                  border-radius: 4px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 32px;
+                  height: 32px;
+                  background: #b8973a;
+                  border-radius: 4px;
+                "
+              ></div>
+            </div>
+            <div class="card-body" style="font-size: 12px">
+              #0A0A0A · #C41E3A<br />#FFFFFF · #B8973A
+            </div>
+          </div>
+
+          <div class="card" style="padding: 24px">
+            <div class="card-title" style="font-size: 14px">FONT</div>
+            <div class="card-body" style="font-size: 12px; line-height: 2">
+              <span style="font-family: &quot;Bebas Neue&quot;"
+                >Bebas Neue</span
+              >
+              — Display<br />
+              <span
+                style="
+                  font-family: &quot;Playfair Display&quot;;
+                  font-style: italic;
+                "
+                >Playfair Display</span
+              >
+              — Heading<br />
+              <span style="font-family: &quot;Cormorant Garamond&quot;"
+                >Cormorant Garamond</span
+              >
+              — Body<br />
+              <span style="font-family: &quot;DM Mono&quot;; font-size: 10px"
+                >DM Mono</span
+              >
+              — Label
+            </div>
+          </div>
+
+          <div class="card" style="padding: 24px">
+            <div class="card-title" style="font-size: 14px">KONTAK</div>
+            <div class="card-body" style="font-size: 12px; line-height: 2">
+              WA: 0822-3061-1299<br />
+              WA: 0813-3312-0579<br />
+              IG: @saeaqiqah<br />
+              Malang, Jawa Timur
+            </div>
+          </div>
+
+          <div class="card" style="padding: 24px">
+            <div class="card-title" style="font-size: 14px">TAGLINE</div>
+            <div
+              class="card-body"
+              style="
+                font-family: &quot;Playfair Display&quot;;
+                font-style: italic;
+                font-size: 14px;
+                color: var(--gold-light);
+                line-height: 1.6;
+              "
+            >
+              "Sempurna Syariatnya,<br />Premium Sajiannya"
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-logo"><span>SAE</span> AQIQAH</div>
+      <div class="footer-tagline">"Sempurna Syariatnya, Premium Sajiannya"</div>
+      <div class="footer-info">
+        Jl. Raya Ketangi No. 60, Tegalgondo, Malang · Belakang Kampus UMM 3<br />
+        WhatsApp: 0822-3061-1299 &nbsp;|&nbsp; 0813-3312-0579<br />
+        Instagram &amp; TikTok: @saeaqiqah<br />
+        <br />
+        Brand Guideline 2026 — Dokumen Internal SAE Aqiqah<br />
+        Malang, Jawa Timur · بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+      </div>
+    </footer>
+  </body>
+</html>

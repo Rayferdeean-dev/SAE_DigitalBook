@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAE Digital Marketing Book</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --black: #0a0a0a;
+        --black-soft: #111111;
+        --black-card: #161616;
+        --red: #c41e3a;
+        --red-dark: #9e1730;
+        --red-glow: rgba(196, 30, 58, 0.18);
+        --gold: #b8952a;
+        --gold-light: #d4aa3c;
+        --gold-muted: rgba(184, 149, 42, 0.15);
+        --white: #ffffff;
+        --off-white: #f5f0eb;
+        --gray: #888888;
+        --gray-light: #cccccc;
+        --border: #222222;
+        --font-display: "Playfair Display", Georgia, serif;
+        --font-body: "DM Sans", sans-serif;
+        --font-accent: "Cormorant Garamond", Georgia, serif;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--black);
+        color: var(--off-white);
+        font-family: var(--font-body);
+        line-height: 1.6;
+        overflow-x: hidden;
+        min-height: 100vh;
+      }
+
+      /* ── NOISE TEXTURE OVERLAY ── */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+        opacity: 0.35;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* ── AMBIENT GLOW ── */
+      .ambient {
+        position: fixed;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 0;
+        filter: blur(120px);
+        opacity: 0.25;
+      }
+      .ambient-1 {
+        width: 600px;
+        height: 600px;
+        background: var(--red);
+        top: -200px;
+        left: -200px;
+        animation: floatA 12s ease-in-out infinite alternate;
+      }
+      .ambient-2 {
+        width: 500px;
+        height: 500px;
+        background: var(--gold);
+        bottom: -150px;
+        right: -150px;
+        animation: floatB 15s ease-in-out infinite alternate;
+        opacity: 0.18;
+      }
+      @keyframes floatA {
+        from {
+          transform: translate(0, 0);
+        }
+        to {
+          transform: translate(60px, 40px);
+        }
+      }
+      @keyframes floatB {
+        from {
+          transform: translate(0, 0);
+        }
+        to {
+          transform: translate(-40px, -60px);
+        }
+      }
+
+      /* ── HEADER / NAV ── */
+      header {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 40px;
+        border-bottom: 1px solid var(--border);
+        background: rgba(10, 10, 10, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        position: sticky;
+        top: 0;
+      }
+      .logo-wrap {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .logo-icon {
+        width: 40px;
+        height: 40px;
+        background: var(--red);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+      .logo-text {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        line-height: 1.2;
+      }
+      .logo-text span {
+        display: block;
+        font-size: 0.65rem;
+        font-family: var(--font-body);
+        font-weight: 400;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+      .badge-internal {
+        font-size: 0.65rem;
+        font-family: var(--font-body);
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold);
+        border: 1px solid var(--gold);
+        padding: 4px 10px;
+        border-radius: 20px;
+        opacity: 0.75;
+      }
+
+      /* ── HERO ── */
+      .hero {
+        position: relative;
+        z-index: 2;
+        padding: 80px 40px 60px;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+        animation: fadeUp 0.8s ease both;
+      }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(32px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hero-eyebrow {
+        font-family: var(--font-body);
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--red);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .hero-eyebrow::before,
+      .hero-eyebrow::after {
+        content: "";
+        display: inline-block;
+        width: 40px;
+        height: 1px;
+        background: var(--red);
+        opacity: 0.6;
+      }
+
+      .hero-title {
+        font-family: var(--font-display);
+        font-size: clamp(2.4rem, 6vw, 4.2rem);
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+        color: var(--white);
+        margin-bottom: 8px;
+      }
+      .hero-title em {
+        font-style: italic;
+        color: var(--gold-light);
+      }
+      .hero-subtitle {
+        font-family: var(--font-accent);
+        font-size: clamp(1rem, 2.5vw, 1.3rem);
+        font-style: italic;
+        color: var(--gray);
+        margin-bottom: 36px;
+      }
+
+      .hero-desc {
+        font-size: 0.97rem;
+        color: var(--gray-light);
+        max-width: 640px;
+        margin: 0 auto 48px;
+        line-height: 1.8;
+        font-weight: 300;
+      }
+      .hero-desc strong {
+        color: var(--gold-light);
+        font-weight: 500;
+      }
+
+      /* ── IMAGE STRIP ── */
+      .image-strip {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        gap: 0;
+        height: 220px;
+        overflow: hidden;
+        margin-bottom: 80px;
+        animation: fadeUp 0.8s 0.2s ease both;
+      }
+      .strip-img {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+      }
+      .strip-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.55) saturate(0.8);
+        transition:
+          filter 0.4s ease,
+          transform 0.6s ease;
+      }
+      .strip-img:hover img {
+        filter: brightness(0.75) saturate(1);
+        transform: scale(1.04);
+      }
+      .strip-img .overlay-label {
+        position: absolute;
+        bottom: 12px;
+        left: 14px;
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.6);
+        font-family: var(--font-body);
+      }
+      /* dividers between images */
+      .strip-img + .strip-img {
+        border-left: 1px solid var(--border);
+      }
+
+      /* ── SECTION LABEL ── */
+      .section-label {
+        text-align: center;
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 12px;
+        position: relative;
+        z-index: 2;
+        animation: fadeUp 0.8s 0.3s ease both;
+      }
+      .section-title {
+        text-align: center;
+        font-family: var(--font-display);
+        font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+        font-weight: 700;
+        color: var(--white);
+        margin-bottom: 48px;
+        position: relative;
+        z-index: 2;
+        animation: fadeUp 0.8s 0.35s ease both;
+      }
+
+      /* ── NAVIGATION CARDS ── */
+      .nav-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 860px;
+        margin: 0 auto 100px;
+        padding: 0 24px;
+        position: relative;
+        z-index: 2;
+        animation: fadeUp 0.8s 0.4s ease both;
+      }
+
+      .nav-card {
+        background: var(--black-card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 32px 28px;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        position: relative;
+        overflow: hidden;
+        transition:
+          border-color 0.3s,
+          transform 0.3s,
+          box-shadow 0.3s;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .nav-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          var(--red-glow) 0%,
+          transparent 60%
+        );
+        opacity: 0;
+        transition: opacity 0.35s;
+      }
+      .nav-card:hover,
+      .nav-card:focus {
+        border-color: var(--red);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px rgba(196, 30, 58, 0.2);
+        outline: none;
+      }
+      .nav-card:hover::before,
+      .nav-card:focus::before {
+        opacity: 1;
+      }
+      .nav-card:active {
+        transform: translateY(-2px);
+      }
+
+      .card-num {
+        font-family: var(--font-accent);
+        font-size: 3rem;
+        font-weight: 300;
+        color: var(--red);
+        line-height: 1;
+        opacity: 0.5;
+        position: absolute;
+        top: 18px;
+        right: 22px;
+        font-style: italic;
+      }
+      .card-icon {
+        font-size: 2rem;
+        line-height: 1;
+      }
+      .card-tag {
+        font-size: 0.62rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--red);
+        font-family: var(--font-body);
+      }
+      .card-title {
+        font-family: var(--font-display);
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        font-weight: 700;
+        color: var(--white);
+        line-height: 1.3;
+      }
+      .card-desc {
+        font-size: 0.82rem;
+        color: var(--gray);
+        line-height: 1.65;
+        font-weight: 300;
+      }
+      .card-arrow {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        color: var(--gold);
+        margin-top: auto;
+        padding-top: 6px;
+        font-family: var(--font-body);
+        transition: gap 0.25s;
+      }
+      .nav-card:hover .card-arrow {
+        gap: 10px;
+      }
+
+      /* ── QUICK INFO STRIP ── */
+      .info-strip {
+        position: relative;
+        z-index: 2;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        background: rgba(22, 22, 22, 0.7);
+        padding: 36px 40px;
+        margin-bottom: 80px;
+        animation: fadeUp 0.8s 0.5s ease both;
+      }
+      .info-inner {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 32px;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .info-item {
+      }
+      .info-num {
+        font-family: var(--font-display);
+        font-size: 2.2rem;
+        font-weight: 900;
+        color: var(--red);
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+      .info-label {
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gray);
+      }
+
+      /* ── HOW TO USE ── */
+      .how-section {
+        position: relative;
+        z-index: 2;
+        max-width: 720px;
+        margin: 0 auto 90px;
+        padding: 0 24px;
+        animation: fadeUp 0.8s 0.55s ease both;
+      }
+      .how-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .how-step {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 22px 28px;
+        border-bottom: 1px solid var(--border);
+        background: var(--black-card);
+        transition: background 0.25s;
+      }
+      .how-step:last-child {
+        border-bottom: none;
+      }
+      .how-step:hover {
+        background: #1c1c1c;
+      }
+      .step-dot {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--red-glow);
+        border: 1px solid var(--red);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--red);
+        font-family: var(--font-body);
+        margin-top: 2px;
+      }
+      .step-content {
+      }
+      .step-title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--white);
+        margin-bottom: 4px;
+      }
+      .step-desc {
+        font-size: 0.8rem;
+        color: var(--gray);
+        line-height: 1.6;
+        font-weight: 300;
+      }
+
+      /* ── DISCLAIMER BANNER ── */
+      .disclaimer {
+        position: relative;
+        z-index: 2;
+        background: var(--gold-muted);
+        border: 1px solid rgba(184, 149, 42, 0.3);
+        border-radius: 12px;
+        padding: 20px 28px;
+        max-width: 720px;
+        margin: 0 auto 80px;
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        animation: fadeUp 0.8s 0.6s ease both;
+      }
+      .disclaimer-icon {
+        font-size: 1.3rem;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+      .disclaimer-text {
+        font-size: 0.8rem;
+        color: #c8b57a;
+        line-height: 1.7;
+        font-weight: 300;
+      }
+      .disclaimer-text strong {
+        color: var(--gold-light);
+        font-weight: 600;
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        position: relative;
+        z-index: 2;
+        border-top: 1px solid var(--border);
+        padding: 32px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+        background: rgba(10, 10, 10, 0.8);
+      }
+      .footer-brand {
+        font-family: var(--font-display);
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--white);
+        opacity: 0.7;
+      }
+      .footer-copy {
+        font-size: 0.7rem;
+        color: var(--gray);
+        text-align: right;
+        letter-spacing: 0.05em;
+      }
+      .footer-copy a {
+        color: var(--gold);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .footer-copy a:hover {
+        text-decoration: underline;
+      }
+
+      /* ── MODAL OVERLAY ── */
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      .modal-overlay.active {
+        display: flex;
+      }
+      .modal-box {
+        background: var(--black-card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 36px 32px 28px;
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+        animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+      }
+      @keyframes popIn {
+        from {
+          opacity: 0;
+          transform: scale(0.85);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .modal-icon {
+        font-size: 2.8rem;
+        margin-bottom: 16px;
+      }
+      .modal-title {
+        font-family: var(--font-display);
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--white);
+        margin-bottom: 12px;
+      }
+      .modal-desc {
+        font-size: 0.82rem;
+        color: var(--gray);
+        line-height: 1.7;
+        margin-bottom: 24px;
+      }
+      .modal-close {
+        background: var(--red);
+        color: var(--white);
+        border: none;
+        padding: 12px 28px;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        cursor: pointer;
+        font-family: var(--font-body);
+        letter-spacing: 0.05em;
+        transition: background 0.2s;
+      }
+      .modal-close:hover {
+        background: var(--red-dark);
+      }
+
+      /* ── MOBILE ── */
+      @media (max-width: 640px) {
+        header {
+          padding: 16px 20px;
+        }
+        .badge-internal {
+          display: none;
+        }
+        .hero {
+          padding: 48px 20px 40px;
+        }
+        .nav-grid {
+          grid-template-columns: 1fr;
+          gap: 14px;
+          padding: 0 16px;
+        }
+        .image-strip {
+          height: 150px;
+        }
+        .strip-img .overlay-label {
+          font-size: 0.55rem;
+        }
+        .info-strip {
+          padding: 28px 20px;
+        }
+        footer {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .footer-copy {
+          text-align: left;
+        }
+        .how-step {
+          padding: 18px 20px;
+          gap: 14px;
+        }
+        .disclaimer {
+          padding: 16px 20px;
+          margin: 0 16px 60px;
+        }
+        .nav-grid {
+          margin-bottom: 60px;
+        }
+      }
+      @media (max-width: 400px) {
+        .nav-card {
+          padding: 24px 20px;
+        }
+        .card-num {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Ambient glow blobs -->
+    <div class="ambient ambient-1"></div>
+    <div class="ambient ambient-2"></div>
+
+    <!-- ── HEADER ── -->
+    <header>
+      <div class="logo-wrap">
+        <div class="logo-icon">
+          <img src="assets/logo-sae.png" alt="SAE" style="width: 28px; height: 28px; object-fit: contain;" onerror="this.style.display='none'" />
+        </div>
+        <div class="logo-text">
+          SAE Digital Marketing Book
+          <span>Panduan Internal Bisnis</span>
+        </div>
+      </div>
+      <div class="badge-internal">Internal Use Only</div>
+    </header>
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+      <div class="hero-eyebrow">SAE Aqiqah · Dokumen Strategis 2026</div>
+      <h1 class="hero-title">Digital Marketing<br /><em>Book</em></h1>
+      <p class="hero-subtitle">
+        Panduan Lengkap Pengembangan Bisnis Aqiqah Premium
+      </p>
+      <p class="hero-desc">
+        Selamat datang di <strong>SAE Digital Marketing Book</strong> — satu
+        dokumen terpadu yang menjadi kompas digital bisnis Anda. Dari identitas
+        merek hingga strategi konten harian, semua tersusun sistematis untuk
+        membantu Anda membangun bisnis aqiqah yang
+        <strong>profesional, konsisten, dan berkelanjutan</strong>. Gunakan
+        panduan ini sebagai referensi utama dalam setiap langkah pengembangan
+        bisnis.
+      </p>
+    </section>
+
+    <!-- ── IMAGE STRIP ── -->
+    <div class="image-strip">
+      <div class="strip-img">
+        <img src="assets/kambingpilihan.jpg" alt="Kambing Pilihan Premium" />
+        <span class="overlay-label">Kambing Pilihan</span>
+      </div>
+      <div class="strip-img">
+        <img src="assets/peternakanhigienis.jpg" alt="Peternakan Higienis" />
+        <span class="overlay-label">Peternakan Higienis</span>
+      </div>
+      <div class="strip-img">
+        <img src="assets/dagingpremium.jpg" alt="Daging Premium Segar" />
+        <span class="overlay-label">Daging Premium</span>
+      </div>
+      <div class="strip-img">
+        <img src="assets/sajianberkualitas.jpg" alt="Sajian Aqiqah Berkualitas" />
+        <span class="overlay-label">Sajian Berkualitas</span>
+      </div>
+    </div>
+
+    <!-- ── QUICK STATS ── -->
+    <div class="info-strip">
+      <div class="info-inner">
+        <div class="info-item">
+          <div class="info-num">4</div>
+          <div class="info-label">Modul Panduan</div>
+        </div>
+        <div class="info-item">
+          <div class="info-num">20+</div>
+          <div class="info-label">Template Konten</div>
+        </div>
+        <div class="info-item">
+          <div class="info-num">100%</div>
+          <div class="info-label">Siap Pakai</div>
+        </div>
+        <div class="info-item">
+          <div class="info-num">2026</div>
+          <div class="info-label">Strategi Terkini</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── NAVIGATION CARDS ── -->
+    <p class="section-label">Navigasi Dokumen</p>
+    <h2 class="section-title">Pilih Modul yang Ingin Dibuka</h2>
+
+    <div class="nav-grid">
+      <!-- Card 1: Website -->
+      <a
+        class="nav-card"
+        href="website.html"
+        tabindex="0"
+        aria-label="Buka Website SAE Aqiqah"
+      >
+        <span class="card-num">01</span>
+        <div class="card-icon">🌐</div>
+        <div class="card-tag">Website</div>
+        <div class="card-title">Website Resmi SAE Aqiqah</div>
+        <div class="card-desc">
+          Tampilan halaman utama website bisnis — struktur, konten, dan
+          pengalaman pelanggan dari awal hingga konversi pemesanan.
+        </div>
+        <div class="card-arrow">Buka Dokumen <span>→</span></div>
+      </a>
+
+      <!-- Card 2: Brand Guideline -->
+      <a
+        class="nav-card"
+        href="brand-guideline.html"
+        tabindex="0"
+        aria-label="Buka Brand Guideline"
+      >
+        <span class="card-num">02</span>
+        <div class="card-icon">🎨</div>
+        <div class="card-tag">Brand Identity</div>
+        <div class="card-title">Brand Guideline 2026</div>
+        <div class="card-desc">
+          Standar identitas merek SAE Aqiqah: palet warna, tipografi, logo, tone
+          of voice, dan aturan penggunaan visual secara konsisten.
+        </div>
+        <div class="card-arrow">Buka Dokumen <span>→</span></div>
+      </a>
+
+      <!-- Card 3: Content Design Template -->
+      <a
+        class="nav-card"
+        href="content-carousel-posts.html"
+        tabindex="0"
+        aria-label="Buka Content Carousel Posts"
+      >
+        <span class="card-num">03</span>
+        <div class="card-icon">📱</div>
+        <div class="card-tag">Desain Konten</div>
+        <div class="card-title">Template Desain Konten</div>
+        <div class="card-desc">
+          20 template carousel siap pakai untuk Instagram & TikTok — dirancang
+          sesuai brand, tinggal isi dan publikasikan.
+        </div>
+        <div class="card-arrow">Buka Dokumen <span>→</span></div>
+      </a>
+
+      <!-- Card 4: Content Plan -->
+      <a
+        class="nav-card"
+        href="content-plan.html"
+        tabindex="0"
+        aria-label="Buka Content Plan"
+      >
+        <span class="card-num">04</span>
+        <div class="card-icon">📅</div>
+        <div class="card-tag">Strategi Konten</div>
+        <div class="card-title">Content Plan Social Media</div>
+        <div class="card-desc">
+          20 ide konten carousel terstruktur untuk sosial media — lengkap dengan
+          tema, caption framework, dan jadwal posting optimal.
+        </div>
+        <div class="card-arrow">Buka Dokumen <span>→</span></div>
+      </a>
+    </div>
+
+    <!-- ── HOW TO USE ── -->
+    <div class="how-section">
+      <p class="section-label" style="text-align: left; margin-bottom: 8px">
+        Cara Penggunaan
+      </p>
+      <h3
+        style="
+          font-family: var(--font-display);
+          font-size: 1.4rem;
+          font-weight: 700;
+          color: var(--white);
+          margin-bottom: 24px;
+        "
+      >
+        Panduan Memulai
+      </h3>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="step-dot">1</div>
+          <div class="step-content">
+            <div class="step-title">Mulai dari Brand Guideline</div>
+            <div class="step-desc">
+              Pahami identitas merek SAE Aqiqah terlebih dahulu. Semua keputusan
+              visual dan komunikasi harus berpedoman pada dokumen ini.
+            </div>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="step-dot">2</div>
+          <div class="step-content">
+            <div class="step-title">Pelajari Struktur Website</div>
+            <div class="step-desc">
+              Review halaman website sebagai referensi tampilan profesional yang
+              perlu diimplementasikan atau direplikasi ke platform digital
+              bisnis.
+            </div>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="step-dot">3</div>
+          <div class="step-content">
+            <div class="step-title">Terapkan Content Plan</div>
+            <div class="step-desc">
+              Gunakan 20 ide konten sebagai jadwal bulanan sosial media.
+              Konsistensi posting adalah kunci pertumbuhan organik.
+            </div>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="step-dot">4</div>
+          <div class="step-content">
+            <div class="step-title">Produksi dengan Template Desain</div>
+            <div class="step-desc">
+              Setelah menentukan topik dari content plan, gunakan template
+              carousel untuk membuat konten visual yang konsisten dan on-brand.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── DISCLAIMER ── -->
+    <div
+      class="disclaimer"
+      style="padding: 0 24px; max-width: 720px; margin: 0 auto 80px"
+    >
+      <div
+        style="
+          background: var(--gold-muted);
+          border: 1px solid rgba(184, 149, 42, 0.3);
+          border-radius: 12px;
+          padding: 20px 24px;
+          display: flex;
+          align-items: flex-start;
+          gap: 14px;
+          width: 100%;
+        "
+      >
+        <div class="disclaimer-icon">⚠️</div>
+        <div class="disclaimer-text">
+          <strong>Dokumen Rahasia Internal.</strong> Seluruh isi dalam SAE
+          Digital Marketing Book ini bersifat rahasia dan hanya untuk penggunaan
+          internal pemilik bisnis SAE Aqiqah. Dilarang mendistribusikan,
+          menyalin, atau membagikan konten ini kepada pihak luar tanpa izin
+          tertulis.
+        </div>
+      </div>
+    </div>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <div class="footer-brand">SAE Digital Marketing Book · 2026</div>
+      <div class="footer-copy">
+        &copy; 2026 SAE Aqiqah. All rights reserved.<br />
+        Dibuat oleh <a href="#" onclick="return false;">Pandira Consulting</a>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth card interaction feedback for touch devices
+      document.querySelectorAll(".nav-card").forEach((card) => {
+        card.addEventListener(
+          "touchstart",
+          function () {
+            this.style.transform = "translateY(-2px)";
+          },
+          { passive: true },
+        );
+        card.addEventListener(
+          "touchend",
+          function () {
+            this.style.transform = "";
+          },
+          { passive: true },
+        );
+      });
+    </script>
+  </body>
+</html>

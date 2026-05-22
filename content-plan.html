@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>SAE Aqiqah — 20 Ide Carousel Post | Social Media Content</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #0a0a0a;
+        font-family: "Inter", sans-serif;
+        color: #f5f3ee;
+        padding: 2rem 1.5rem;
+      }
+
+      .container {
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+
+      /* header */
+      .header {
+        text-align: center;
+        margin-bottom: 3rem;
+        border-bottom: 1px solid rgba(201, 168, 76, 0.3);
+        padding-bottom: 1.5rem;
+      }
+      .nav-home-link {
+        display: inline-block;
+        margin-bottom: 1.5rem;
+        padding: 8px 16px;
+        background: #c41e3a;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: background 0.2s;
+      }
+      .nav-home-link:hover {
+        background: #9e1730;
+      }
+      .brand {
+        font-size: 0.75rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: #c9a84c;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #ffffff 0%, #c9a84c 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        letter-spacing: -0.02em;
+      }
+      .sub {
+        color: #aaa;
+        font-size: 0.85rem;
+        margin-top: 0.5rem;
+        font-weight: 400;
+      }
+      .note {
+        background: rgba(196, 30, 58, 0.12);
+        border-left: 4px solid #c41e3a;
+        padding: 0.8rem 1.2rem;
+        border-radius: 12px;
+        margin: 1.8rem 0;
+        font-size: 0.85rem;
+        color: #ddd;
+      }
+
+      /* grid posts */
+      .posts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 2rem;
+      }
+
+      /* card post */
+      .post-card {
+        background: #111111;
+        border-radius: 28px;
+        overflow: hidden;
+        border: 1px solid rgba(201, 168, 76, 0.25);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s;
+        box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.6);
+      }
+      .post-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(201, 168, 76, 0.5);
+        box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.8);
+      }
+
+      /* carousel slides (3 kotak 4:5) */
+      .carousel-slides {
+        display: flex;
+        gap: 12px;
+        padding: 20px 20px 12px 20px;
+        background: #0d0d0d;
+        border-bottom: 1px solid #222;
+      }
+      .slide-item {
+        flex: 1;
+        aspect-ratio: 4 / 5;
+        background: #1a1a1a;
+        border-radius: 18px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(201, 168, 76, 0.3);
+        transition: all 0.2s;
+      }
+      /* dekorasi desain interior slide */
+      .slide-decoration {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 2;
+      }
+      .deco-corner {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        border-top: 2px solid #c9a84c;
+        border-left: 2px solid #c9a84c;
+        top: 12px;
+        left: 12px;
+        opacity: 0.6;
+      }
+      .deco-corner-br {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        border-bottom: 2px solid #c9a84c;
+        border-right: 2px solid #c9a84c;
+        bottom: 12px;
+        right: 12px;
+        opacity: 0.6;
+      }
+      .deco-line {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        width: 40px;
+        height: 1px;
+        background: #c41e3a;
+        opacity: 0.7;
+      }
+      .placeholder-content {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0.8rem;
+        background: radial-gradient(
+          circle at 30% 20%,
+          rgba(37, 66, 27, 0.2),
+          #0f0f0f
+        );
+      }
+      .placeholder-icon {
+        font-size: 2.2rem;
+        margin-bottom: 12px;
+        opacity: 0.7;
+        color: #c9a84c;
+      }
+      .placeholder-text {
+        font-size: 0.7rem;
+        font-weight: 500;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 4px 10px;
+        border-radius: 40px;
+        color: #f5f3ee;
+        letter-spacing: 0.3px;
+        backdrop-filter: blur(2px);
+      }
+      .placeholder-desc {
+        font-size: 0.65rem;
+        color: #c9a84c;
+        margin-top: 8px;
+        font-weight: 400;
+        max-width: 90%;
+      }
+      .slide-label {
+        position: absolute;
+        bottom: 8px;
+        left: 12px;
+        font-size: 0.55rem;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.5);
+        background: rgba(0, 0, 0, 0.4);
+        padding: 2px 6px;
+        border-radius: 20px;
+        z-index: 6;
+      }
+
+      /* konten caption */
+      .post-info {
+        padding: 1.2rem 1.2rem 1.4rem;
+      }
+      .post-date {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        background: #c41e3a;
+        padding: 0.2rem 0.8rem;
+        border-radius: 30px;
+        color: white;
+        margin-bottom: 12px;
+      }
+      .post-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.2px;
+        color: #ffffff;
+        border-left: 3px solid #c9a84c;
+        padding-left: 12px;
+      }
+      .caption-text {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        color: #cfcfcf;
+        margin: 12px 0 10px;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 8px 12px;
+        border-radius: 16px;
+      }
+      .hashtags {
+        font-size: 0.7rem;
+        color: #c9a84c;
+        word-break: break-word;
+        margin-top: 8px;
+        padding-top: 6px;
+        border-top: 1px dashed #2a2a2a;
+      }
+      hr {
+        border-color: #222;
+        margin: 0;
+      }
+
+      @media (max-width: 720px) {
+        body {
+          padding: 1rem;
+        }
+        .carousel-slides {
+          gap: 8px;
+          padding: 12px 12px 8px;
+        }
+        .post-title {
+          font-size: 1rem;
+        }
+        .caption-text {
+          font-size: 0.75rem;
+        }
+      }
+      footer {
+        margin-top: 3rem;
+        text-align: center;
+        font-size: 0.7rem;
+        color: #5a5a5a;
+        border-top: 1px solid #222;
+        padding-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html" class="nav-home-link">← Kembali ke Home</a>
+      <div class="header">
+        <div class="brand">SAE AQIQAH — PREMIUM SYAR'I</div>
+        <h1>20 Carousel Post Playbook</h1>
+        <div class="sub">
+          Mulai 25 Mei | 3–4 postingan/minggu | Konten dinamis & edukatif
+        </div>
+        <div class="note">
+          📌 Setiap carousel terdiri dari 3 slide (4:5). Gambar bersifat
+          placeholder — Anda dapat mengganti dengan foto asli kandang, produk,
+          tim, atau ilustrasi sesuai panduan visual SAE (hitam, merah, emas,
+          earth tone). Desain dekorasi sudah tersedia.
+        </div>
+      </div>
+
+      <div class="posts-grid" id="postsGrid"></div>
+      <footer>
+        SAE Aqiqah — Sempurna Syariatnya, Premium Sajiannya. #AqiqahMalang
+        #KandangSendiri<br />
+        Template carousel 4:5 dengan gaya eksklusif, siap pakai untuk feed
+        Instagram & TikTok.
+      </footer>
+    </div>
+
+    <script>
+      // ===================== DATA 20 IDE CAROUSEL =====================
+      const carouselData = [
+        {
+          // 1
+          title: "Kenapa Harus Pilih Kambing Sendiri?",
+          date: "25 Mei 2026",
+          slides: [
+            {
+              icon: "🐐",
+              desc: "Pilih langsung kambing pilihan",
+              hint: "Foto kambing sehat di kandang 11x30m",
+            },
+            {
+              icon: "🔍",
+              desc: "Cek fisik & gigi (poel)",
+              hint: "Close-up cek gigi kambing",
+            },
+            {
+              icon: "✅",
+              desc: "Bebas dari makelar",
+              hint: "Infografis perbandingan makelar vs kandang sendiri",
+            },
+          ],
+          caption:
+            "Bingung apakah kambing aqiqah sudah sesuai syariat? Di SAE Aqiqah, Anda BISA datang dan pilih sendiri kambingnya. Kandang terbuka 7 hari — lihat langsung kesehatan & ukuran hewan. Bukan sekadar janji, tapi bukti transparansi. Amanah dari hulu ke hilir. Yuk, rencanakan aqiqah buah hati dengan ketenangan penuh!",
+          hashtags:
+            "#AqiqahMalang #PilihKambingSendiri #KandangTerbuka #Syar'iAqiqah #SAEAqiqah #AqiqahPremium #MalangRaya #KambingSehat #TransparansiAqiqah #JasaAqiqahMalang #AqiqahSunnah #MeatSpecialist #Qurban2026 #KetenanganHati #HalalThayyib",
+        },
+        {
+          // 2
+          title: "3 Mitos Aqiqah yang Bikin Ragu",
+          date: "27 Mei 2026",
+          slides: [
+            {
+              icon: "❌",
+              desc: "Mitos 1: Boleh kambing sakit",
+              hint: "Ilustrasi kambing sehat vs sakit",
+            },
+            {
+              icon: "📖",
+              desc: "Mitos 2: Aqiqah cukup 1 ekor untuk anak laki",
+              hint: "Penjelasan fiqih 2 ekor untuk laki-laki",
+            },
+            {
+              icon: "⏳",
+              desc: "Mitos 3: Bisa ditunda bertahun-tahun",
+              hint: "Grafik waktu afdhal aqiqah hari ke-7",
+            },
+          ],
+          caption:
+            "Masih banyak mitos seputar aqiqah yang bikin calon orang tua ragu. SAE Aqiqah hadir sebagai konsultan ibadah — bukan sekadar katering. Simak faktanya menurut fiqih yang sahih, biar ibadah makin mantap. Sudah tahu mana yang benar? Geser slide-nya!",
+          hashtags:
+            "#MitosAqiqah #EdukasiAqiqah #AqiqahSyariah #FiqihAqiqah #SAEAqiqah #Malang #AqiqahBayi #KonsultanIbadah #Syar'i #AqiqahPremiumMalang #TanyaAqiqah #KambingPoel #AqiqahModern #UstadzRecommend #KeluargaMuslim",
+        },
+        {
+          // 3
+          title: "Tour Kandang SAE Aqiqah",
+          date: "29 Mei 2026",
+          slides: [
+            {
+              icon: "🏠",
+              desc: "Lahan 11x30m milik sendiri",
+              hint: "Foto drone atau sudut luas kandang",
+            },
+            {
+              icon: "👨‍🌾",
+              desc: "Tim profesional & seragam hitam",
+              hint: "Tim SAE dengan apron dan seragam solid",
+            },
+            {
+              icon: "📹",
+              desc: "Bisa saksikan langsung proses",
+              hint: "Pelanggan sedang memilih kambing bersama tim",
+            },
+          ],
+          caption:
+            "Kami undang Bapak/Ibu untuk tur virtual kandang SAE Aqiqah! Dari bibit hingga pakan, semua kami kelola sendiri. Nggak percaya? Datang langsung ke Tegalgondo, buktikan sendiri. Karena kepercayaan dibangun dari transparansi. Siapa siap berkunjung?",
+          hashtags:
+            "#TurKandang #KandangSendiri #SAEAqiqah #MalangEastJava #AqiqahTerbuka #PeternakanKambing #BehindTheScene #AqiqahTransparan #MeatLovers #B2BAqiqah #TempatAqiqahMalang #KambingQurban #HalalFoodie #NgampusUMM3 #AqiqahIdaman",
+        },
+        {
+          // 4
+          title: "Makelar vs Kandang Sendiri",
+          date: "31 Mei 2026",
+          slides: [
+            {
+              icon: "🔄",
+              desc: "Makelar: harga murah tapi tidak jelas asal",
+              hint: "Ilustrasi middleman",
+            },
+            {
+              icon: "🏆",
+              desc: "Kandang SAE: kualitas & syar'i terjamin",
+              hint: "Foto tim dengan background kandang",
+            },
+            {
+              icon: "📊",
+              desc: "Perbandingan dari A sampai Z",
+              hint: "Tabel singkat perbedaan kredibilitas",
+            },
+          ],
+          caption:
+            "Mau aqiqah tapi bingung pilih penyedia? Banyak layanan digital tanpa kandang — alias makelar. Hasilnya? Ukuran kambing tidak standar & ragu syar'i. SAE Aqiqah punya kandang sendiri, 20 tahun pengalaman, dan Anda bisa lihat langsung. Jangan sampai ibadah terganggu karena pilih yang instan.",
+          hashtags:
+            "#MakelarVsKandangSendiri #AqiqahTerpercaya #SAEAqiqah #MalangRaya #JasaAqiqah #KambingSiapPotong #Transparan #AqiqahSyar'i #HindariMakelar #QualityControl #MeatSupplierMalang #AqiqahBerkah #KambingSehat #BisnisAqiqah #OrangTuaCermat",
+        },
+        {
+          // 5
+          title: "Cara Cek Gigi Kambing (Poel)",
+          date: "2 Juni 2026",
+          slides: [
+            {
+              icon: "🦷",
+              desc: "Cek gigi seri: sudah tumbuh permanen?",
+              hint: "Close-up gigi kambing",
+            },
+            {
+              icon: "📏",
+              desc: "Usia minimal 1 tahun (poel)",
+              hint: "Ilustrasi infografis umur kambing",
+            },
+            {
+              icon: "✔️",
+              desc: "SAE jamin 100% kriteria syar'i",
+              hint: "Foto tim memeriksa kambing",
+            },
+          ],
+          caption:
+            "Tahukah Anda? Kambing untuk aqiqah harus sudah poel (cukup umur), minimal 1 tahun atau gigi permanen sudah tumbuh. Di SAE Aqiqah, kami selalu pastikan setiap hewan memenuhi syarat sah. Kami ajari pelanggan cara ceknya, bahkan bantu pilihkan. Edukasi, bukan sekadar jualan!",
+          hashtags:
+            "#CekGigiKambing #Poel #SyaratAqiqah #EdukasiQurban #SAEAqiqah #MalangAqiqah #KambingSiapAqiqah #KonsultasiAqiqah #TipsSyariat #AqiqahSunnah #MeatSpecialist #UmurKambing #AqiqahSah #MalangHitamEmas #PerawatanKambing",
+        },
+        {
+          // 6
+          title: "Testimoni Pelanggan: Bikin Tenang Hati",
+          date: "4 Juni 2026",
+          slides: [
+            {
+              icon: "⭐",
+              desc: "Keluarga Bahagia dari Lowokwaru",
+              hint: "Foto pelanggan bersama produk SAE",
+            },
+            {
+              icon: "📱",
+              desc: "Chat WA penuh rasa syukur",
+              hint: "Screenshot testimoni WA",
+            },
+            {
+              icon: "🍽️",
+              desc: "Sajian gulai & sate premium",
+              hint: "Plating fine dining dengan kardus hitam",
+            },
+          ],
+          caption:
+            "Alhamdulillah, hari ini happy banget menerima apresiasi dari klien setia SAE. 'Dagingnya empuk, sajiannya mewah, dan yang penting saya tenang karena syarat umur terpenuhi.' Inilah kenapa kami tidak kompromi dengan kualitas. Mau merasakan ketenangan yang sama? Konsultasi aqiqah yuk!",
+          hashtags:
+            "#TestimoniAqiqah #PelangganSae #AqiqahPremiumMalang #KetenanganHati #MalangKota #KeluargaSehat #AqiqahIdaman #MeatQuality #SateKambingEnak #GulaiKambing #ReviewJasaAqiqah #SAEAqiqahMalang #BuktiNyata #KandangSendiri #Syukur",
+        },
+        {
+          // 7
+          title: "Menu Sajian Premium Aqiqah",
+          date: "6 Juni 2026",
+          slides: [
+            {
+              icon: "🍲",
+              desc: "Gulai kambing bumbu spesial",
+              hint: "Foto gulai dengan plating emas",
+            },
+            {
+              icon: "🍢",
+              desc: "Sate bumbu rempah pilihan",
+              hint: "Sate di piring kayu rustic",
+            },
+            {
+              icon: "🍛",
+              desc: "Tongseng & nasi kebuli",
+              hint: "Penyajian ala fine dining",
+            },
+          ],
+          caption:
+            "Aqiqah tidak hanya soal sahnya ibadah, tapi juga kebahagiaan berbagi. Sajian premium ala bintang lima menggunakan daging segar dari kandang sendiri. Dari tekstur hingga rasa — dijamin tamu undangan puas dan keluarga bahagia. Lihat selengkapnya di slide!",
+          hashtags:
+            "#SajianPremium #AqiqahEnak #GulaiKambing #SateKambing #TongsengSpesial #SAEAqiqah #CateringAqiqah #MalangFoodie #KulinerMalang #KambingSegar #AqiqahSyar'i #PestaAqiqah #MeatPlatter #FineDiningAqiqah #RempahNusantara",
+        },
+        {
+          // 8
+          title: "5 Kesalahan Saat Memilih Jasa Aqiqah",
+          date: "8 Juni 2026",
+          slides: [
+            {
+              icon: "⚠️",
+              desc: "Tidak cek langsung kambing",
+              hint: "Ilustrasi galau booking online tanpa lihat",
+            },
+            {
+              icon: "📃",
+              desc: "Harga murah tapi embel-embel tersembunyi",
+              hint: "Infografis hidden fee",
+            },
+            {
+              icon: "❓",
+              desc: "Asal halal tanpa bukti",
+              hint: "Sertifikat atau bukti visual",
+            },
+          ],
+          caption:
+            "Jangan sampai momen bahagia aqiqah bayi menjadi beban karena salah pilih jasa. Kami rangkum 5 kesalahan fatal yang sering terjadi: mulai dari tidak mengecek kandang, hingga mengabaikan keabsahan syar'i. Simak dan pastikan Anda tidak mengalaminya.",
+          hashtags:
+            "#KesalahanAqiqah #TipsMemilihAqiqah #SAEAqiqah #AqiqahSyar'i #MalangRaya #JasaAqiqahTerpercaya #PilihKandang #AqiqahAntiGagal #OrangtuaCermat #EdukasiIbadah #HalalHub #KambingQurban #CekUmur #AqiqahAnak #CalonIbu",
+        },
+        {
+          // 9
+          title: "Proses Penyembelihan Syar'i",
+          date: "10 Juni 2026",
+          slides: [
+            {
+              icon: "🕋",
+              desc: "Mengikuti tuntunan sunnah",
+              hint: "Ilustrasi tata cara yang benar",
+            },
+            {
+              icon: "🗡️",
+              desc: "Penyembelih bersertifikat",
+              hint: "Foto ahli sembelih dengan seragam",
+            },
+            {
+              icon: "🤲",
+              desc: "Doa & adab sesuai syariat",
+              hint: "Momen ketenangan ketika penyembelihan",
+            },
+          ],
+          caption:
+            "Penyembelihan syar'i bukan hanya sekadar halal, tetapi juga menjaga kekhusyuan ibadah. Di SAE Aqiqah, proses ini dilakukan oleh tim yang kompeten, menghormati hewan, dan selalu didampingi doa. Pelanggan pun dapat menyaksikan langsung bila berkenan. Ini komitmen amanah.",
+          hashtags:
+            "#PenyembelihanSyar'i #SunnahAqiqah #AdabQurban #SAEAqiqah #HalalThayyib #ProsesTerbuka #MalangBerkah #KambingSiapSembelih #TataCaraAqiqah #MeatIndonesia #AqiqahSesuaiSyariat #KonsultanIbadah #RumahPotongHewan #KeluargaSakinah #TransparansiTotal",
+        },
+        {
+          // 10
+          title: "Kambing Qurban Idul Adha 2026",
+          date: "12 Juni 2026",
+          slides: [
+            {
+              icon: "🐏",
+              desc: "Kambing jantan gagah ready",
+              hint: "Foto kambing jantan besar",
+            },
+            {
+              icon: "📆",
+              desc: "Booking dari sekarang H-45",
+              hint: "Kalender countdown",
+            },
+            {
+              icon: "🎁",
+              desc: "Beli jantan + gratis betina (paket spesial)",
+              hint: "Grafik promo bundle",
+            },
+          ],
+          caption:
+            "Idul Adha semakin dekat! SAE Aqiqah sudah menyiapkan kambing qurban pilihan dengan kondisi sehat, gemuk, dan memenuhi syarat. Kami buka kesempatan booking lebih awal dengan paket menarik. Pilih sendiri, lihat langsung, dan qurban dengan tenang. Lokasi di Malang Raya & kirim se-Jawa Timur.",
+          hashtags:
+            "#Qurban2026 #IdulAdha #KambingQurbanMalang #PaketQurban #SAEAqiqah #MalangRaya #HewanQurban #KurbanSyar'i #PromoQurban #BeliJantanGratisBetina #QurbanOnline #KandangSendiri #MasjidMalang #PanitiaQurban #DistribusiQurban",
+        },
+        {
+          // 11
+          title: "Aqiqah Bayi Perempuan vs Laki-laki",
+          date: "14 Juni 2026",
+          slides: [
+            {
+              icon: "👧",
+              desc: "1 ekor kambing untuk bayi perempuan",
+              hint: "Infografis ketentuan",
+            },
+            {
+              icon: "👦",
+              desc: "2 ekor kambing untuk bayi laki-laki",
+              hint: "Ilustrasi jumlah ekor",
+            },
+            {
+              icon: "📜",
+              desc: "Dalil & penjelasan ulama",
+              hint: "Cuplikan kitab/quote ulama",
+            },
+          ],
+          caption:
+            "Masih banyak yang tanya, bedanya aqiqah untuk bayi perempuan dan laki-laki apa? Berdasarkan sunnah, untuk anak laki-laki 2 ekor kambing dan perempuan 1 ekor (pendapat jumhur). Yang terpenting adalah ikhlas dan tepat syariat. SAE Aqiqah siap membantu kelancaran ibadah Anda.",
+          hashtags:
+            "#AqiqahBayiPerempuan #AqiqahLakiLaki #FiqihAqiqah #SAEAqiqah #KeluargaMuslim #AqiqahSunnah #KelahiranBayi #KonsultasiAqiqah #MalangAqiqah #DuaEkor #SatuEkor #HukumAqiqah #TuntunanNabi #AqiqahBerkah #Syar'iAqiqah",
+        },
+        {
+          // 12
+          title: "Dari Kandang ke Meja Tamu: 20 Tahun Pengalaman",
+          date: "16 Juni 2026",
+          slides: [
+            {
+              icon: "🕰️",
+              desc: "Sejak 2004 — pengabdian keluarga Muslim",
+              hint: "Foto lama/lokasi awal",
+            },
+            {
+              icon: "📈",
+              desc: "Ribuan pelanggan puas",
+              hint: "Grafik pencapaian",
+            },
+            {
+              icon: "🚀",
+              desc: "SAE Premium Syar'i siap go digital",
+              hint: "Mockup sosial media modern",
+            },
+          ],
+          caption:
+            "20 tahun lalu dari lahan sederhana di belakang UMM 3, kami memulai. Hari ini SAE Aqiqah tetap berpegang pada nilai: SYAR'I, AMANAH, EXCELLENT. Kami tidak meninggalkan warisan, justru melebarkannya dengan inovasi digital. Terima kasih untuk seluruh kepercayaan. Mari terus berkah.",
+          hashtags:
+            "#20TahunSAE #SejarahAqiqah #SAEAqiqah #MalangPremium #BrandAqiqah #KeluargaBerkah #KandangMilikSendiri #LayananAqiqah #EkspansiJatim #AqiqahFranchise #WarisanKeluarga #NyArieTnYufi #Tegalgondo #UMM3Malang #NilaiSyar'i",
+        },
+        {
+          // 13
+          title: "Bisnis B2B: Supplier Daging untuk Warung Sate",
+          date: "18 Juni 2026",
+          slides: [
+            {
+              icon: "🍖",
+              desc: "Daging segar harga kompetitif @130rb/kg",
+              hint: "Foto daging segar dengan watermark harga",
+            },
+            {
+              icon: "🚚",
+              desc: "Pengiriman rutin + jadwal pasti",
+              hint: "Armada delivery",
+            },
+            {
+              icon: "🤝",
+              desc: "Sampel gratis untuk calon mitra",
+              hint: "Box sample daging untuk restoran",
+            },
+          ],
+          caption:
+            "Pemilik warung sate, restoran, atau hotel? SAE Aqiqah membuka kerja sama B2B dengan harga bersaing, kualitas stabil, dan pasokan dari kandang sendiri. Kepala kambing, kaki, karkas utuh juga tersedia. Free sample untuk uji rasa. Hubungi Tim B2B sekarang.",
+          hashtags:
+            "#SupplierDagingMalang #B2BAqiqah #DagingKambingSegar #WarungSate #RestoranMalang #HotelBatu #KarkasKambing #SAEAqiqahB2B #MeatSupplier #HargaKompetitif #KambingHidup #PasokanHarian #KulinerMalang #UsahaKatering #ChefIndonesia",
+        },
+        {
+          // 14
+          title: "Paket Aqiqah Lengkap: Apa Saja yang Didapat?",
+          date: "20 Juni 2026",
+          slides: [
+            {
+              icon: "📦",
+              desc: "Kardus hitam doff + stiker emas",
+              hint: "Unboxing packaging premium",
+            },
+            {
+              icon: "🍱",
+              desc: "Isi menu: nasi, lauk, sambal, buah",
+              hint: "Layout box lengkap",
+            },
+            {
+              icon: "📄",
+              desc: "+ sertifikat & doa aqiqah",
+              hint: "Bonus eksklusif",
+            },
+          ],
+          caption:
+            "Takut ribet mengurus aqiqah? Paket komplit SAE Aqiqah mulai dari pemilihan kambing, penyembelihan syar'i, pengolahan higienis, hingga pengiriman ke rumah. Sajian packing premium, aman sampai tujuan. Yang Anda dapatkan: ketenangan ibadah dan kebahagiaan berbagi.",
+          hashtags:
+            "#PaketAqiqahLengkap #AqiqahTanpaRibet #SAEAqiqah #CateringAqiqah #KardusHitamPremium #AqiqahSiapSaji #MalangKuliner #KirimAqiqah #ProsesHigienis #Syar'iCatering #OrangtuaBaru #BookingAqiqah #KambingPilihan #SateGuling #MeatBox",
+        },
+        {
+          // 15
+          title: "Keuntungan Bisa Lihat Langsung Kambing",
+          date: "22 Juni 2026",
+          slides: [
+            {
+              icon: "👀",
+              desc: "Cek kesehatan fisik",
+              hint: "Foto kambing dengan pupil sehat",
+            },
+            {
+              icon: "🤳",
+              desc: "Video call ke kandang realtime",
+              hint: "Tim show kandang via WA video",
+            },
+            {
+              icon: "📌",
+              desc: "100% sesuai ekspektasi",
+              hint: "Pelanggan beri jempol di kandang",
+            },
+          ],
+          caption:
+            "Belanja aqiqah online boleh saja, tapi lebih tenang kalau bisa lihat langsung. Di SAE Aqiqah, Anda bisa datang atau minta video call ke kandang. Pilih kambing favorit, lihat ukuran, dan baru pesan. Tidak ada istilah 'kambing tidak sesuai' karena Anda yang tentukan.",
+          hashtags:
+            "#LihatLangsung #PilihKambingSendiri #SAEAqiqah #TransparansiPenuh #KandangTerbuka #VideoCallKandang #AqiqahModern #MalangDigital #CheckDulu #KambingIdaman #AqiqahSesuaiSyariat #PelangganPrioritas #KonsultasiWA #Syar'iPremium #JasaAqiqahMalang",
+        },
+        {
+          // 16
+          title: "Kapan Waktu Terbaik Aqiqah?",
+          date: "24 Juni 2026",
+          slides: [
+            {
+              icon: "🗓️",
+              desc: "Hari ke-7 kelahiran (afdhal)",
+              hint: "Kalender dengan tanda",
+            },
+            {
+              icon: "⌛",
+              desc: "Jika terhalang, hari ke-14 atau 21",
+              hint: "Alternatif waktu",
+            },
+            {
+              icon: "🏡",
+              desc: "Jangan sampai lewat baligh",
+              hint: "Ilustrasi keluarga Islami",
+            },
+          ],
+          caption:
+            "Waktu terbaik aqiqah adalah hari ke-7 setelah kelahiran. Tapi jika ada kendala, masih bisa di hari ke-14, 21, atau kapan saja sebelum anak baligh. Yang utama jangan sampai ditinggalkan. SAE Aqiqah siap membantu kapan pun Anda butuh, dengan pelayanan cepat & tepat.",
+          hashtags:
+            "#WaktuAqiqah #HariKe7 #AqiqahBayi #SAEAqiqah #KelahiranAnak #AqiqahTepatWaktu #EdukasiSyariat #OrangtuaHebat #BundaSholehah #AqiqahSunnah #MalangRaya #JadwalAqiqah #AqiqahBerkah #KonsultasiGratis #IbadahSempurna",
+        },
+        {
+          // 17
+          title: "Mengapa Harga Bukan Segalanya",
+          date: "26 Juni 2026",
+          slides: [
+            {
+              icon: "💰",
+              desc: "Harga murah = kualitas tidak pasti",
+              hint: "Ilustrasi spekulasi",
+            },
+            {
+              icon: "🎯",
+              desc: "Yang Anda bayar: ketenangan & keabsahan",
+              hint: "Icon hati tenang",
+            },
+            {
+              icon: "🏅",
+              desc: "Investasi ibadah yang tak ternilai",
+              hint: "Momen kebahagiaan bersama keluarga",
+            },
+          ],
+          caption:
+            "Banyak yang tergiur harga murah, namun lupa mengecek umur kambing, kebersihan, dan kesesuaian syariat. SAE Aqiqah tidak pernah menjual yang termurah, tapi kami menjamin nilai lebih: kambing poel, proses terbuka, sajian bintang lima. Harga yang setara dengan ketenangan hati.",
+          hashtags:
+            "#HargaBukanPatokan #AqiqahBerkualitas #SAEAqiqah #InvestasiIbadah #KetenanganHati #Transparan #KambingSyar'i #PremiumValue #MalangRaya #BijakMemilih #QualityOverPrice #AqiqahIdaman #UangAndaBerharga #SyukurNikmat #Syar'iPremium",
+        },
+        {
+          // 18
+          title: "Behind the Scene: Dapur Higienis SAE",
+          date: "28 Juni 2026",
+          slides: [
+            {
+              icon: "🧼",
+              desc: "Standar kebersihan ketat",
+              hint: "Foto dapur stainless bersih",
+            },
+            {
+              icon: "🧑‍🍳",
+              desc: "Tim berpengalaman & berseragam",
+              hint: "Chef SAE memotong daging",
+            },
+            {
+              icon: "🍽️",
+              desc: "Penyajian dengan gloves & masker",
+              hint: "Proses plating higienis",
+            },
+          ],
+          caption:
+            "Sajian premium lahir dari dapur yang bersih dan terstandar. Kami memperlakukan daging sebagaimana layaknya untuk keluarga sendiri. Higienis, rapi, dan penuh cinta. Tim SAE bekerja profesional dari memasak hingga packing. Ini yang membuat rasa & kepercayaan semakin kuat.",
+          hashtags:
+            "#DapurHigienis #BehindTheScene #SAEAqiqah #StandarMutu #KulinerMalang #ChefAqiqah #ProsesMemasak #HygienicKitchen #FoodSafety #PremiumCatering #DagingBersih #MalangFood #AqiqahSehat #ReadyToEat #TrustedKitchen",
+        },
+        {
+          // 19
+          title: "Produk Frozen: Daging Siap Masak",
+          date: "30 Juni 2026",
+          slides: [
+            {
+              icon: "❄️",
+              desc: "Daging vacuum kemasan 500gr & 1kg",
+              hint: "Foto frozen vacuum seal",
+            },
+            {
+              icon: "🛒",
+              desc: "Bisa beli via marketplace nasional",
+              hint: "Shopee/Tokopedia mock",
+            },
+            {
+              icon: "🍳",
+              desc: "Tinggal masak, praktis & bergizi",
+              hint: "Olahan daging frozen siap saji",
+            },
+          ],
+          caption:
+            "Kini SAE Aqiqah hadir dengan lini produk frozen! Daging kambing segar yang langsung divakum, tahan lama, dan tetap berkualitas. Tersedia juga kepala, kaki beku untuk warung atau kebutuhan rumahan. Sebisa mungkin kami hadir di dapur Anda, kapan saja. Order via WA atau online marketplace segera!",
+          hashtags:
+            "#DagingFrozen #FrozenMeatMalang #SAEAqiqah #DagingKambingVacuum #ProdukFrozen #ShopeeFood #DagingSiapMasak #KakiKambing #KepalaKambing #SupplierFrozen #MalangB2C #MeatMarketplace #KirimNasional #BekuBerkualitas #KulinerPraktis",
+        },
+        {
+          // 20
+          title: "Komitmen SAE: Syar'i, Amanah, Excellent",
+          date: "2 Juli 2026",
+          slides: [
+            {
+              icon: "🕌",
+              desc: "Syar'i : 100% sesuai tuntunan",
+              hint: "Visual kaligrafi",
+            },
+            {
+              icon: "🤝",
+              desc: "Amanah : terbuka tanpa rekayasa",
+              hint: "Ikon transparansi",
+            },
+            {
+              icon: "⭐",
+              desc: "Excellent : layanan & rasa premium",
+              hint: "Bintang lima premium",
+            },
+          ],
+          caption:
+            "Tiga pilar yang tidak bisa ditawar. SAE Aqiqah terus berkomitmen menjadi mitra ibadah keluarga Muslim Malang dan sekitarnya. Terima kasih telah mempercayakan aqiqah & qurban bersama kami. Mari sebarkan kebaikan dengan berbagi informasi ini ke sanak saudara. Sampai jumpa di kandang!",
+          hashtags:
+            "#Syar'iAmanahExcellent #SAEAqiqah #KomitmenBrand #AqiqahMalang #KeluargaBerkah #PremiumSyari #MeatSpecialist #EkspansiJatim #MalangJuara #BisnisBerkah #LayananPrima #KandangKami #Tegalgondo #IndonesiaBerkurban #AqiqahSunnah",
+        },
+      ];
+
+      // RENDER FUNCTION
+      function renderPosts() {
+        const grid = document.getElementById("postsGrid");
+        if (!grid) return;
+        grid.innerHTML = "";
+        carouselData.forEach((post, idx) => {
+          const card = document.createElement("div");
+          card.className = "post-card";
+
+          // slides carousel
+          const slidesHTML = `
+        <div class="carousel-slides">
+          ${post.slides
+            .map(
+              (slide, i) => `
+            <div class="slide-item">
+              <div class="slide-decoration">
+                <div class="deco-corner"></div>
+                <div class="deco-corner-br"></div>
+                <div class="deco-line"></div>
+              </div>
+              <div class="placeholder-content">
+                <div class="placeholder-icon">${slide.icon}</div>
+                <div class="placeholder-text">Gambar ${i + 1} · 4:5</div>
+                <div class="placeholder-desc">📸 ${slide.desc}</div>
+                <div style="font-size: 0.6rem; color:#aaa; margin-top:12px;">${slide.hint}</div>
+              </div>
+              <div class="slide-label">slide ${i + 1}/3</div>
+            </div>
+          `,
+            )
+            .join("")}
+        </div>
+      `;
+
+          // caption & metadata
+          const infoHTML = `
+        <div class="post-info">
+          <div class="post-date">📅 ${post.date}</div>
+          <div class="post-title">${post.title}</div>
+          <div class="caption-text">✍️ ${post.caption}</div>
+          <div class="hashtags">${post.hashtags
+            .split(" ")
+            .map((tag) => (tag.startsWith("#") ? tag : "#" + tag))
+            .join(" ")}</div>
+        </div>
+      `;
+
+          card.innerHTML = slidesHTML + infoHTML;
+          grid.appendChild(card);
+        });
+      }
+
+      renderPosts();
+    </script>
+  </body>
+</html>

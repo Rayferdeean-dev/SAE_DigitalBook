@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAE Aqiqah — 20 Carousel Posts | Instagram & TikTok</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0A0A0A;--red:#C41E3A;--red-d:#9B1730;--gold:#B8973A;--gold-l:#D4AF6A;--white:#FFFFFF;--muted:#AAAAAA;--card:#161616;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F7F5F2;font-family:'DM Mono',monospace;padding:40px 20px;min-height:100vh;}
+h1.pt{text-align:center;font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,5vw,52px);letter-spacing:.12em;color:var(--black);margin-bottom:6px;}
+.psub{text-align:center;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.3em;color:var(--red);text-transform:uppercase;margin-bottom:6px;}
+.ptag{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:#666;margin-bottom:40px;}
+.sep{display:flex;align-items:center;gap:14px;margin:44px auto 18px;max-width:460px;}
+.sep-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.sep-lbl{font-size:9px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;font-weight:700;white-space:nowrap;}
+.cw{width:100%;max-width:460px;margin:0 auto 64px;}
+.frame{width:100%;aspect-ratio:1/1;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.18),0 2px 8px rgba(0,0,0,.1);}
+.track{display:flex;height:100%;transition:transform .5s cubic-bezier(.4,0,.2,1);}
+.slide{min-width:100%;height:100%;position:relative;overflow:hidden;}
+/* backgrounds */
+.bg-dark{background:var(--black);}
+.bg-red{background:var(--red);}
+.bg-gold{background:var(--gold);}
+.bg-cream{background:#F5EDD8;}
+.bg-deep{background:#0F0A0A;}
+/* grain */
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");z-index:1;}
+/* deco */
+.deco{position:absolute;pointer-events:none;z-index:2;}
+.ring{border-radius:50%;border:1px solid rgba(184,151,58,.35);}
+.ring-r{border-radius:50%;border:1px solid rgba(255,255,255,.15);}
+.dot-g{border-radius:50%;background:rgba(184,151,58,.18);}
+.dot-r{border-radius:50%;background:rgba(196,30,58,.25);}
+/* slide content */
+.sc{position:absolute;inset:0;z-index:10;display:flex;flex-direction:column;padding:28px 30px 30px;}
+.meta{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:auto;}
+.bm{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:.22em;}
+.sn{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.18em;opacity:.5;}
+.divl{width:36px;height:2px;margin:auto 0 14px;flex-shrink:0;}
+.tag{display:inline-block;font-size:8px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;padding:4px 10px;margin-bottom:12px;border-radius:1px;align-self:flex-start;}
+.hl{font-family:'Playfair Display',serif;font-weight:700;line-height:1.05;margin-bottom:12px;}
+.hl-i{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;line-height:1.1;margin-bottom:12px;}
+.body{font-family:'Cormorant Garamond',serif;font-size:13px;line-height:1.65;margin-bottom:14px;opacity:.85;}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px;}
+.chip{font-size:8px;font-weight:700;letter-spacing:.07em;padding:4px 10px;border-radius:1px;border:1px solid;}
+.cta{display:inline-block;font-family:'DM Mono',monospace;font-size:8.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:10px 20px;border-radius:1px;align-self:flex-start;margin-top:auto;}
+.handle{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;opacity:.65;margin-top:8px;}
+.sw{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.15em;font-weight:600;opacity:.45;margin-top:8px;}
+.bign{font-family:'Bebas Neue',sans-serif;font-size:130px;line-height:1;opacity:.06;position:absolute;z-index:3;}
+/* light slide overrides */
+.light .bm,.light .sn,.light .hl,.light .hl-i,.light .body,.light .sw{color:var(--black)!important;}
+.light .tag{background:var(--black);color:var(--white);}
+.light .chip{border-color:rgba(0,0,0,.25);color:var(--black);}
+.light .cta{background:var(--black);color:var(--white);}
+.light .handle{color:var(--black);}
+.light .divl{background:var(--red);}
+/* dark slide */
+.dark .bm,.dark .sn,.dark .hl,.dark .hl-i,.dark .body,.dark .sw,.dark .handle{color:var(--white)!important;}
+.dark .tag{background:var(--red);color:var(--white);}
+.dark .chip{border-color:rgba(255,255,255,.2);color:var(--white);}
+.dark .cta{background:var(--gold);color:var(--black);}
+.dark .divl{background:var(--gold);}
+/* gold slide */
+.golds .bm,.golds .sn,.golds .hl,.golds .hl-i,.golds .body,.golds .sw,.golds .handle{color:var(--black)!important;}
+.golds .tag{background:var(--black);color:var(--gold);}
+.golds .chip{border-color:rgba(0,0,0,.3);color:var(--black);}
+.golds .cta{background:var(--black);color:var(--gold);}
+.golds .divl{background:var(--black);}
+/* red slide */
+.reds .bm,.reds .sn,.reds .hl,.reds .hl-i,.reds .body,.reds .sw,.reds .handle{color:var(--white)!important;}
+.reds .tag{background:rgba(0,0,0,.3);color:var(--white);}
+.reds .chip{border-color:rgba(255,255,255,.3);color:var(--white);}
+.reds .cta{background:var(--white);color:var(--red);}
+.reds .divl{background:var(--white);}
+/* controls */
+.ctrl{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:12px;}
+.dots{display:flex;gap:6px;}
+.dot{width:6px;height:6px;border-radius:1px;background:rgba(10,10,10,.2);cursor:pointer;transition:all .3s;}
+.dot.on{width:20px;background:var(--red);}
+.navrow{display:flex;gap:6px;}
+.nb{width:34px;height:34px;border-radius:1px;border:1.5px solid rgba(10,10,10,.2);background:transparent;color:var(--black);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;font-family:'DM Mono',monospace;}
+.nb:hover{background:var(--red);border-color:var(--red);color:#fff;}
+.hint{font-size:9px;letter-spacing:.2em;color:rgba(10,10,10,.35);margin-top:2px;}
+/* caption box */
+.cap-box{background:#fff;border-radius:12px;max-width:460px;margin:0 auto 0;padding:18px 20px;box-shadow:0 4px 20px rgba(0,0,0,.07);border:1px solid rgba(184,151,58,.2);}
+.cap-date{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.15em;background:var(--red);color:#fff;padding:3px 12px;border-radius:30px;margin-bottom:10px;text-transform:uppercase;}
+.cap-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--black);margin-bottom:8px;padding-left:10px;border-left:3px solid var(--gold);}
+.cap-text{font-family:'Cormorant Garamond',serif;font-size:14px;line-height:1.6;color:#444;background:#fafafa;padding:10px 12px;border-radius:8px;margin-bottom:8px;}
+.cap-tags{font-family:'DM Mono',monospace;font-size:9px;color:var(--gold);word-break:break-word;padding-top:6px;border-top:1px dashed rgba(184,151,58,.3);line-height:1.8;}
+footer{text-align:center;margin-top:60px;padding-top:24px;border-top:1px solid rgba(184,151,58,.3);font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;color:#888;text-transform:uppercase;}
+</style>
+</head>
+<body>
+<div style="max-width:460px;margin:0 auto 16px;text-align:center;">
+  <a href="index.html" style="display:inline-block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.3em;color:#c41e3a;text-decoration:none;border:1px solid #c41e3a;padding:5px 14px;border-radius:2px;">← KEMBALI KE INDEX</a>
+</div>
+<div class="psub">SAE Aqiqah · Malang · @saeaqiqah</div>
+<h1 class="pt">20 Carousel Posts</h1>
+<div class="ptag">"Sempurna Syariatnya, Premium Sajiannya" — Instagram &amp; TikTok 2026</div>
+
+<!-- ============================================================
+     CAROUSEL 1 – Kenapa Harus Pilih Kambing Sendiri?
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 01 · Pilih Kambing Sendiri</div><div class="sep-line"></div></div>
+<div class="cw" data-c="1">
+  <div class="frame"><div class="track">
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:180px;height:180px;top:-60px;right:-60px;"></div>
+      <div class="deco dot-r" style="width:80px;height:80px;bottom:40px;left:-20px;"></div>
+      <div class="bign" style="bottom:0;right:10px;">01</div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Transparansi Penuh</span>
+        <div class="hl" style="font-size:clamp(28px,6vw,46px);color:#fff;">Kenapa<br>Harus Pilih<br><span style="color:var(--gold);">Sendiri?</span></div>
+        <p class="body" style="color:rgba(255,255,255,.75);">Bukan sekadar janji — di SAE Aqiqah<br>Anda datang, lihat, dan pilih langsung.</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:150px;height:150px;bottom:-40px;right:-40px;border-color:rgba(10,10,10,.12);"></div>
+      <div class="bign" style="bottom:0;left:0;color:rgba(10,10,10,1);">02</div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Kandang Terbuka 7 Hari</span>
+        <div class="hl" style="font-size:clamp(24px,5vw,38px);color:var(--black);">Cek Fisik &amp;<br>Gigi (Poel)<br>Langsung.</div>
+        <div class="chips">
+          <span class="chip">🐐 Kandang 11×30m</span>
+          <span class="chip">✅ Umur Terjamin</span>
+          <span class="chip">🔍 Bebas Cek</span>
+        </div>
+        <p class="body">Syarat sah aqiqah dimulai dari hewan yang tepat. Kami tidak sembunyikan apapun.</p>
+      </div>
+    </div>
+    <div class="slide bg-red reds">
+      <div class="grain"></div>
+      <div class="deco ring-r" style="width:200px;height:200px;top:-80px;left:-80px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Amanah · 20 Tahun</span>
+        <div class="hl" style="font-size:clamp(28px,6vw,44px);color:#fff;">Bebas<br>dari<br>Makelar.</div>
+        <p class="body" style="color:rgba(255,255,255,.8);">Kandang sendiri = kontrol penuh dari hulu ke hilir. Ibadah Anda layak mendapat yang terbaik.</p>
+        <span class="cta">📲 Konsultasi Sekarang</span>
+        <span class="handle">wa.me/6282230611299</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(1,0)"></div><div class="dot" onclick="g(1,1)"></div><div class="dot" onclick="g(1,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(1)">←</button><button class="nb" onclick="n(1)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 25 Mei 2026</div>
+  <div class="cap-title">Kenapa Harus Pilih Kambing Sendiri?</div>
+  <div class="cap-text">Bingung apakah kambing aqiqah sudah sesuai syariat? Di SAE Aqiqah, Anda BISA datang dan pilih sendiri kambingnya. Kandang terbuka 7 hari — lihat langsung kesehatan &amp; ukuran hewan. Bukan sekadar janji, tapi bukti transparansi. Amanah dari hulu ke hilir. Yuk, rencanakan aqiqah buah hati dengan ketenangan penuh!</div>
+  <div class="cap-tags">#AqiqahMalang #PilihKambingSendiri #KandangTerbuka #Syar'iAqiqah #SAEAqiqah #AqiqahPremium #MalangRaya #KambingSehat #TransparansiAqiqah #JasaAqiqahMalang</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 2 – 3 Mitos Aqiqah
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 02 · 3 Mitos Aqiqah</div><div class="sep-line"></div></div>
+<div class="cw" data-c="2">
+  <div class="frame"><div class="track">
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:200px;height:200px;top:-70px;right:-70px;border-color:rgba(196,30,58,.2);"></div>
+      <div class="bign" style="bottom:0;right:5px;">M</div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl" style="background:var(--red);"></div>
+        <span class="tag" style="background:var(--red);color:#fff;">Edukasi Syariat</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,42px);color:var(--black);">3 Mitos<br>Aqiqah yang<br><span style="color:var(--red);">Bikin Ragu.</span></div>
+        <p class="body">Banyak orang tua masih tertipu informasi keliru. Cek faktanya sebelum terlambat!</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco dot-g" style="width:120px;height:120px;top:20px;right:-30px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Fakta vs Mitos</span>
+        <div class="hl-i" style="font-size:clamp(22px,4.5vw,36px);color:var(--gold-l,#D4AF6A);">❌ Boleh kambing sakit<br>❌ Cukup 1 ekor laki-laki<br>❌ Bisa ditunda lama</div>
+        <p class="body" style="color:rgba(255,255,255,.75);margin-top:10px;">Ketiganya SALAH. Ibadah yang sah butuh ilmu yang benar. SAE Aqiqah siap konsultasi gratis.</p>
+      </div>
+    </div>
+    <div class="slide bg-gold golds">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:160px;height:160px;bottom:-50px;right:-50px;border-color:rgba(0,0,0,.15);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Konsultan Ibadah</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,40px);color:var(--black);">Ibadah<br>yang Sah<br>Dimulai<br>dari Ilmu.</div>
+        <p class="body">Konsultasi fiqih aqiqah gratis bersama tim SAE. Mantap syariatnya, tenang hatinya.</p>
+        <span class="cta">📲 Tanya Gratis via WA</span>
+        <span class="handle">@saeaqiqah</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(2,0)"></div><div class="dot" onclick="g(2,1)"></div><div class="dot" onclick="g(2,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(2)">←</button><button class="nb" onclick="n(2)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 27 Mei 2026</div>
+  <div class="cap-title">3 Mitos Aqiqah yang Bikin Ragu</div>
+  <div class="cap-text">Masih banyak mitos seputar aqiqah yang bikin calon orang tua ragu. SAE Aqiqah hadir sebagai konsultan ibadah — bukan sekadar katering. Simak faktanya menurut fiqih yang sahih, biar ibadah makin mantap. Sudah tahu mana yang benar? Geser slide-nya!</div>
+  <div class="cap-tags">#MitosAqiqah #EdukasiAqiqah #AqiqahSyariah #FiqihAqiqah #SAEAqiqah #Malang #AqiqahBayi #KonsultanIbadah #Syar'i #AqiqahPremiumMalang</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 3 – Tour Kandang SAE
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 03 · Tour Kandang SAE</div><div class="sep-line"></div></div>
+<div class="cw" data-c="3">
+  <div class="frame"><div class="track">
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:220px;height:220px;bottom:-80px;left:-80px;"></div>
+      <div class="bign" style="top:0;right:0;">11</div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Behind The Scene</span>
+        <div class="hl" style="font-size:clamp(28px,6vw,46px);color:#fff;">Tour<br>Kandang<br><span style="color:var(--gold);">Kami.</span></div>
+        <p class="body" style="color:rgba(255,255,255,.75);">Lahan 11×30m milik sendiri — bukan sewa, bukan titip. Inilah transparansi sesungguhnya.</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco dot-r" style="width:100px;height:100px;top:20px;right:20px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl" style="background:var(--gold);"></div>
+        <span class="tag" style="background:var(--gold);color:#fff;">Tim Profesional</span>
+        <div class="hl" style="font-size:clamp(24px,5vw,38px);">Tim Kami<br>Siap<br>Menyambut.</div>
+        <div class="chips" style="margin-top:4px;">
+          <span class="chip" style="background:var(--black);color:#fff;border-color:var(--black);">👨‍🌾 Berseragam Hitam</span>
+          <span class="chip">🏆 20 Thn Pengalaman</span>
+          <span class="chip">📹 Video Call Kandang</span>
+        </div>
+        <p class="body">Profesional dari penampilan hingga pelayanan. Kami jaga kepercayaan Anda.</p>
+      </div>
+    </div>
+    <div class="slide bg-red reds">
+      <div class="grain"></div>
+      <div class="deco ring-r" style="width:180px;height:180px;top:-60px;right:-60px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Kunjungi Kami</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,42px);color:#fff;">Datang<br>atau<br>Video Call.</div>
+        <p class="body" style="color:rgba(255,255,255,.8);">Siap menyaksikan kandang secara langsung? Kami undang Anda. Kepercayaan dimulai dari sini.</p>
+        <span class="cta">📍 Tegalgondo, Malang</span>
+        <span class="handle">Belakang UMM 3</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(3,0)"></div><div class="dot" onclick="g(3,1)"></div><div class="dot" onclick="g(3,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(3)">←</button><button class="nb" onclick="n(3)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 29 Mei 2026</div>
+  <div class="cap-title">Tour Kandang SAE Aqiqah</div>
+  <div class="cap-text">Kami undang Bapak/Ibu untuk tur virtual kandang SAE Aqiqah! Dari bibit hingga pakan, semua kami kelola sendiri. Nggak percaya? Datang langsung ke Tegalgondo, buktikan sendiri. Karena kepercayaan dibangun dari transparansi. Siapa siap berkunjung?</div>
+  <div class="cap-tags">#TurKandang #KandangSendiri #SAEAqiqah #MalangEastJava #AqiqahTerbuka #PeternakanKambing #BehindTheScene #AqiqahTransparan #TempatAqiqahMalang</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 4 – Makelar vs Kandang Sendiri
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 04 · Makelar vs Kandang Sendiri</div><div class="sep-line"></div></div>
+<div class="cw" data-c="4">
+  <div class="frame"><div class="track">
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:170px;height:170px;bottom:-60px;left:-60px;border-color:rgba(196,30,58,.2);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl" style="background:var(--red);"></div>
+        <span class="tag" style="background:var(--red);color:#fff;">Jangan Salah Pilih</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,42px);">Makelar<br>vs<br><span style="color:var(--red);">Kandang<br>Sendiri.</span></div>
+        <p class="body">Perbedaannya bukan soal harga — tapi ketenangan ibadah Anda. Geser untuk tahu faktanya.</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco dot-g" style="width:140px;height:140px;top:-40px;right:-40px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Perbandingan A–Z</span>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:12px;margin-top:6px;">
+          <div style="background:rgba(255,255,255,.05);border:1px solid rgba(196,30,58,.4);padding:8px 10px;border-radius:4px;">
+            <div style="font-size:8px;letter-spacing:.15em;color:var(--red);text-transform:uppercase;margin-bottom:6px;">Makelar</div>
+            <div style="font-size:9.5px;color:rgba(255,255,255,.65);line-height:1.7;font-family:'Cormorant Garamond',serif;">❌ Hewan tidak diketahui<br>❌ Kualitas tidak stabil<br>❌ Tak bisa dicek langsung</div>
+          </div>
+          <div style="background:rgba(184,151,58,.08);border:1px solid rgba(184,151,58,.4);padding:8px 10px;border-radius:4px;">
+            <div style="font-size:8px;letter-spacing:.15em;color:var(--gold);text-transform:uppercase;margin-bottom:6px;">SAE Aqiqah</div>
+            <div style="font-size:9.5px;color:rgba(255,255,255,.75);line-height:1.7;font-family:'Cormorant Garamond',serif;">✅ Kandang sendiri<br>✅ Cek langsung/video<br>✅ 100% syar'i terjamin</div>
+          </div>
+        </div>
+        <p class="body" style="color:rgba(255,255,255,.65);font-size:12px;">Jangan biarkan ibadah terganggu karena pilih yang instan.</p>
+      </div>
+    </div>
+    <div class="slide bg-gold golds">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:160px;height:160px;top:-50px;left:-50px;border-color:rgba(0,0,0,.15);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">20 Tahun Amanah</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,40px);">Pilih yang<br>Sudah<br>Terbukti.</div>
+        <p class="body">Keluarga Muslim Malang telah mempercayai SAE selama 20 tahun. Bukan kebetulan.</p>
+        <span class="cta">📲 Order Sekarang</span>
+        <span class="handle">0822-3061-1299</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(4,0)"></div><div class="dot" onclick="g(4,1)"></div><div class="dot" onclick="g(4,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(4)">←</button><button class="nb" onclick="n(4)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 31 Mei 2026</div>
+  <div class="cap-title">Makelar vs Kandang Sendiri</div>
+  <div class="cap-text">Mau aqiqah tapi bingung pilih penyedia? Banyak layanan digital tanpa kandang — alias makelar. Hasilnya? Ukuran kambing tidak standar &amp; ragu syar'i. SAE Aqiqah punya kandang sendiri, 20 tahun pengalaman, dan Anda bisa lihat langsung.</div>
+  <div class="cap-tags">#MakelarVsKandangSendiri #AqiqahTerpercaya #SAEAqiqah #MalangRaya #JasaAqiqah #KambingSiapPotong #Transparan #AqiqahSyar'i #KandangSendiri</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 5 – Cara Cek Gigi Kambing (Poel)
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 05 · Cara Cek Gigi Kambing</div><div class="sep-line"></div></div>
+<div class="cw" data-c="5">
+  <div class="frame"><div class="track">
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco dot-g" style="width:200px;height:200px;bottom:-80px;right:-80px;"></div>
+      <div class="bign" style="bottom:0;left:0;">P</div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Edukasi Syariat</span>
+        <div class="hl" style="font-size:clamp(28px,6vw,46px);color:#fff;">Cara Cek<br>Gigi<br><span style="color:var(--gold);">Kambing.</span></div>
+        <p class="body" style="color:rgba(255,255,255,.75);">Tahukah Anda? Ini syarat wajib yang sering terlewat. Geser untuk belajar cara bedakan poel.</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:140px;height:140px;top:-40px;right:-40px;border-color:rgba(184,151,58,.25);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl" style="background:var(--gold);"></div>
+        <span class="tag" style="background:var(--gold);color:var(--black);">Standar Syar'i</span>
+        <div class="hl" style="font-size:clamp(22px,4.5vw,36px);">Poel = Gigi<br>Seri Permanen<br>Sudah Tumbuh.</div>
+        <div class="chips">
+          <span class="chip">🦷 Min. Usia 1 Tahun</span>
+          <span class="chip">📏 Domba: 1 Tahun</span>
+          <span class="chip">📏 Kambing: 2 Tahun</span>
+        </div>
+        <p class="body">Ini yang membedakan aqiqah sah dari yang tidak. SAE selalu pastikan setiap hewan memenuhi syarat ini.</p>
+      </div>
+    </div>
+    <div class="slide bg-red reds">
+      <div class="grain"></div>
+      <div class="deco ring-r" style="width:200px;height:200px;bottom:-70px;left:-70px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Garansi SAE</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,42px);color:#fff;">SAE Jamin<br>100%<br>Kriteria Sah.</div>
+        <p class="body" style="color:rgba(255,255,255,.8);">Kami ajari pelanggan cara ceknya, bahkan bantu pilihkan. Edukasi, bukan sekadar jualan!</p>
+        <span class="cta">📲 Konsultasi Gratis</span>
+        <span class="handle">@saeaqiqah</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(5,0)"></div><div class="dot" onclick="g(5,1)"></div><div class="dot" onclick="g(5,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(5)">←</button><button class="nb" onclick="n(5)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 2 Juni 2026</div>
+  <div class="cap-title">Cara Cek Gigi Kambing (Poel)</div>
+  <div class="cap-text">Tahukah Anda? Kambing untuk aqiqah harus sudah poel (cukup umur), minimal 1 tahun atau gigi permanen sudah tumbuh. Di SAE Aqiqah, kami selalu pastikan setiap hewan memenuhi syarat sah. Kami ajari pelanggan cara ceknya, bahkan bantu pilihkan.</div>
+  <div class="cap-tags">#CekGigiKambing #Poel #SyaratAqiqah #EdukasiQurban #SAEAqiqah #MalangAqiqah #KambingSiapAqiqah #TipsSyariat #AqiqahSunnah #UmurKambing</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 6 – Testimoni Pelanggan
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 06 · Testimoni Pelanggan</div><div class="sep-line"></div></div>
+<div class="cw" data-c="6">
+  <div class="frame"><div class="track">
+    <div class="slide bg-gold golds">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:200px;height:200px;top:-70px;right:-70px;border-color:rgba(0,0,0,.12);"></div>
+      <div class="bign" style="bottom:-10px;left:0;">⭐</div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Suara Pelanggan</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,42px);">"Tenang<br>Hati Kami<br>Terjaga."</div>
+        <p class="body" style="font-style:italic;">— Keluarga dari Lowokwaru, pelanggan setia SAE sejak 2020.</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco dot-r" style="width:120px;height:120px;top:30px;left:-30px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Kata Mereka</span>
+        <div style="background:rgba(255,255,255,.05);border-left:3px solid var(--gold);padding:14px 16px;border-radius:0 8px 8px 0;margin-bottom:14px;">
+          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:rgba(255,255,255,.85);line-height:1.7;">"Dagingnya empuk, sajiannya mewah, dan yang penting saya tenang karena syarat umur terpenuhi. Alhamdulillah."</p>
+          <p style="font-family:'DM Mono',monospace;font-size:8px;color:var(--gold);margin-top:8px;letter-spacing:.1em;">⭐⭐⭐⭐⭐ · Verified Customer</p>
+        </div>
+        <div class="chips">
+          <span class="chip">🍽️ Gulai Premium</span>
+          <span class="chip">📦 Packing Hitam</span>
+          <span class="chip">✅ Syar'i 100%</span>
+        </div>
+      </div>
+    </div>
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:160px;height:160px;bottom:-50px;right:-50px;border-color:rgba(184,151,58,.2);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl" style="background:var(--red);"></div>
+        <span class="tag" style="background:var(--red);color:#fff;">Giliran Anda</span>
+        <div class="hl" style="font-size:clamp(24px,5vw,38px);">Rasakan<br>Ketenangan<br>yang Sama.</div>
+        <p class="body">Ibadah yang sah + sajian premium + pelayanan amanah. Inilah standar SAE Aqiqah.</p>
+        <span class="cta" style="background:var(--red);color:#fff;">📲 Booking Aqiqah</span>
+        <span class="handle" style="color:#666;">0813-3312-0579</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(6,0)"></div><div class="dot" onclick="g(6,1)"></div><div class="dot" onclick="g(6,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(6)">←</button><button class="nb" onclick="n(6)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 4 Juni 2026</div>
+  <div class="cap-title">Testimoni Pelanggan: Bikin Tenang Hati</div>
+  <div class="cap-text">Alhamdulillah, menerima apresiasi dari klien setia SAE. "Dagingnya empuk, sajiannya mewah, dan yang penting saya tenang karena syarat umur terpenuhi." Inilah kenapa kami tidak kompromi dengan kualitas. Mau merasakan ketenangan yang sama? Konsultasi aqiqah yuk!</div>
+  <div class="cap-tags">#TestimoniAqiqah #PelangganSae #AqiqahPremiumMalang #KetenanganHati #MalangKota #AqiqahIdaman #SateKambingEnak #GulaiKambing #ReviewJasaAqiqah #SAEAqiqahMalang</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 7 – Menu Sajian Premium
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 07 · Menu Sajian Premium</div><div class="sep-line"></div></div>
+<div class="cw" data-c="7">
+  <div class="frame"><div class="track">
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco dot-g" style="width:180px;height:180px;top:-60px;right:-60px;"></div>
+      <div class="bign" style="bottom:0;right:5px;">🍲</div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Premium Catering</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,44px);color:#fff;">Sajian<br>Bintang<br><span style="color:var(--gold);">Lima.</span></div>
+        <p class="body" style="color:rgba(255,255,255,.75);">Dari kandang sendiri ke meja tamu — cita rasa yang tak terlupakan. Geser lihat menunya.</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:150px;height:150px;bottom:-40px;left:-40px;border-color:rgba(184,151,58,.2);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl" style="background:var(--gold);"></div>
+        <span class="tag" style="background:var(--gold);color:var(--black);">Menu Spesial</span>
+        <div class="hl" style="font-size:clamp(22px,4.5vw,34px);">Gulai · Sate<br>Tongseng ·<br>Nasi Kebuli.</div>
+        <div class="chips" style="margin-top:8px;">
+          <span class="chip">🍲 Bumbu Rempah Khas</span>
+          <span class="chip">🍢 Daging Segar</span>
+          <span class="chip">🍛 Plating Elegan</span>
+        </div>
+        <p class="body">Diolah dari daging segar kandang sendiri. Tekstur, rasa, dan penyajian — semua premium.</p>
+      </div>
+    </div>
+    <div class="slide bg-gold golds">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:180px;height:180px;bottom:-60px;right:-60px;border-color:rgba(0,0,0,.1);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Kebahagiaan Berbagi</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,40px);">Ibadah<br>Lengkap,<br>Tamu Puas.</div>
+        <p class="body">Aqiqah bukan hanya soal sah — tapi kebahagiaan keluarga dan tamu undangan yang ikut merasakan.</p>
+        <span class="cta">📲 Lihat Paket Lengkap</span>
+        <span class="handle">@saeaqiqah</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(7,0)"></div><div class="dot" onclick="g(7,1)"></div><div class="dot" onclick="g(7,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(7)">←</button><button class="nb" onclick="n(7)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 6 Juni 2026</div>
+  <div class="cap-title">Menu Sajian Premium Aqiqah</div>
+  <div class="cap-text">Aqiqah tidak hanya soal sahnya ibadah, tapi juga kebahagiaan berbagi. Sajian premium ala bintang lima menggunakan daging segar dari kandang sendiri. Dari tekstur hingga rasa — dijamin tamu undangan puas dan keluarga bahagia.</div>
+  <div class="cap-tags">#SajianPremium #AqiqahEnak #GulaiKambing #SateKambing #TongsengSpesial #SAEAqiqah #CateringAqiqah #MalangFoodie #KambingSegar #RempahNusantara</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 8 – 5 Kesalahan Memilih Jasa Aqiqah
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 08 · 5 Kesalahan Fatal</div><div class="sep-line"></div></div>
+<div class="cw" data-c="8">
+  <div class="frame"><div class="track">
+    <div class="slide bg-red reds">
+      <div class="grain"></div>
+      <div class="deco ring-r" style="width:180px;height:180px;top:-60px;right:-60px;"></div>
+      <div class="bign" style="bottom:0;left:0;opacity:.08;">5</div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Waspada!</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,42px);color:#fff;">5 Kesalahan<br>Saat Pilih<br>Jasa Aqiqah.</div>
+        <p class="body" style="color:rgba(255,255,255,.8);">Jangan sampai momen bahagia aqiqah menjadi beban. Geser — kenali kesalahannya sekarang.</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco dot-g" style="width:160px;height:160px;bottom:-50px;right:-50px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Daftar Kesalahan</span>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:10px;margin-top:4px;">
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--red);font-size:11px;font-weight:700;margin-top:1px;">01</span><span style="font-family:'Cormorant Garamond',serif;font-size:12.5px;color:rgba(255,255,255,.75);line-height:1.5;">Tidak cek langsung kondisi kambing</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--red);font-size:11px;font-weight:700;margin-top:1px;">02</span><span style="font-family:'Cormorant Garamond',serif;font-size:12.5px;color:rgba(255,255,255,.75);line-height:1.5;">Tergiur harga kompetitif tanpa verifikasi</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--red);font-size:11px;font-weight:700;margin-top:1px;">03</span><span style="font-family:'Cormorant Garamond',serif;font-size:12.5px;color:rgba(255,255,255,.75);line-height:1.5;">Asal halal tanpa bukti fisik</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--red);font-size:11px;font-weight:700;margin-top:1px;">04</span><span style="font-family:'Cormorant Garamond',serif;font-size:12.5px;color:rgba(255,255,255,.75);line-height:1.5;">Pesan via makelar tanpa kandang sendiri</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--red);font-size:11px;font-weight:700;margin-top:1px;">05</span><span style="font-family:'Cormorant Garamond',serif;font-size:12.5px;color:rgba(255,255,255,.75);line-height:1.5;">Tidak tanya umur hewan (syarat poel)</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:170px;height:170px;top:-60px;right:-60px;border-color:rgba(196,30,58,.15);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl" style="background:var(--red);"></div>
+        <span class="tag" style="background:var(--red);color:#fff;">Solusinya SAE</span>
+        <div class="hl" style="font-size:clamp(24px,5vw,38px);">Semua<br>Terjawab<br>di SAE.</div>
+        <p class="body">Kami hadir untuk menghilangkan semua kekhawatiran. Transparansi total, ibadah sempurna.</p>
+        <span class="cta" style="background:var(--black);color:#fff;">📲 Anti Salah Pilih</span>
+        <span class="handle" style="color:#666;">wa.me/6282230611299</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(8,0)"></div><div class="dot" onclick="g(8,1)"></div><div class="dot" onclick="g(8,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(8)">←</button><button class="nb" onclick="n(8)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 8 Juni 2026</div>
+  <div class="cap-title">5 Kesalahan Saat Memilih Jasa Aqiqah</div>
+  <div class="cap-text">Jangan sampai momen bahagia aqiqah bayi menjadi beban karena salah pilih jasa. Kami rangkum 5 kesalahan fatal yang sering terjadi: mulai dari tidak mengecek kandang, hingga mengabaikan keabsahan syar'i. Simak dan pastikan Anda tidak mengalaminya.</div>
+  <div class="cap-tags">#KesalahanAqiqah #TipsMemilihAqiqah #SAEAqiqah #AqiqahSyar'i #MalangRaya #JasaAqiqahTerpercaya #AqiqahAntiGagal #EdukasiIbadah #CekUmur #AqiqahAnak</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 9 – Proses Penyembelihan Syar'i
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 09 · Penyembelihan Syar'i</div><div class="sep-line"></div></div>
+<div class="cw" data-c="9">
+  <div class="frame"><div class="track">
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco dot-g" style="width:200px;height:200px;top:-80px;left:-80px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Sunnah Nabi ﷺ</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,44px);color:#fff;">Proses<br>Penyembelihan<br><span style="color:var(--gold);">Syar'i.</span></div>
+        <p class="body" style="color:rgba(255,255,255,.75);">Bukan hanya halal — tapi mengikuti tata cara Sunnah Nabi ﷺ secara penuh. Geser lihat prosesnya.</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:160px;height:160px;bottom:-50px;right:-50px;border-color:rgba(184,151,58,.2);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl" style="background:var(--gold);"></div>
+        <span class="tag" style="background:var(--gold);color:var(--black);">Standar Kami</span>
+        <div class="hl" style="font-size:clamp(22px,4.5vw,34px);">Doa · Arah<br>Kiblat · Pisau<br>Tajam. Benar.</div>
+        <div class="chips">
+          <span class="chip">🕋 Menghadap Kiblat</span>
+          <span class="chip">🤲 Doa Lengkap</span>
+          <span class="chip">🗡️ Ahli Bersertifikat</span>
+        </div>
+        <p class="body">Penyembelih kami kompeten dan menghormati hewan. Pelanggan bisa menyaksikan langsung.</p>
+      </div>
+    </div>
+    <div class="slide bg-gold golds">
+      <div class="grain"></div>
+      <div class="deco dot-r" style="width:140px;height:140px;top:-40px;right:-40px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Amanah Total</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,40px);">Saksikan<br>Sendiri —<br>Ibadah Anda.</div>
+        <p class="body">Kami persilakan Anda hadir saat penyembelihan. Ini komitmen amanah yang tidak kami sembunyikan.</p>
+        <span class="cta">📲 Reservasi Sekarang</span>
+        <span class="handle">0822-3061-1299</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(9,0)"></div><div class="dot" onclick="g(9,1)"></div><div class="dot" onclick="g(9,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(9)">←</button><button class="nb" onclick="n(9)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 10 Juni 2026</div>
+  <div class="cap-title">Proses Penyembelihan Syar'i</div>
+  <div class="cap-text">Penyembelihan syar'i bukan hanya sekadar halal, tetapi juga menjaga kekhusyuan ibadah. Di SAE Aqiqah, proses ini dilakukan oleh tim yang kompeten, menghormati hewan, dan selalu didampingi doa. Pelanggan pun dapat menyaksikan langsung bila berkenan. Ini komitmen amanah.</div>
+  <div class="cap-tags">#PenyembelihanSyar'i #SunnahAqiqah #AdabQurban #SAEAqiqah #HalalThayyib #ProsesTerbuka #MalangBerkah #TataCaraAqiqah #TransparansiTotal #KeluargaSakinah</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 10 – Kambing Qurban Idul Adha 2026
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 10 · Qurban Idul Adha 2026</div><div class="sep-line"></div></div>
+<div class="cw" data-c="10">
+  <div class="frame"><div class="track">
+    <div class="slide bg-red reds">
+      <div class="grain"></div>
+      <div class="deco ring-r" style="width:220px;height:220px;bottom:-80px;left:-80px;"></div>
+      <div class="bign" style="top:0;right:0;opacity:.07;">Q</div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Idul Adha 2026</span>
+        <div class="hl" style="font-size:clamp(28px,6vw,46px);color:#fff;">Qurban<br>dengan<br><span style="color:rgba(255,255,255,.65);font-style:italic;">Tenang.</span></div>
+        <p class="body" style="color:rgba(255,255,255,.8);">Kambing jantan siap qurban, kondisi sehat &amp; gemuk. Booking dari sekarang — slot terbatas!</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco dot-g" style="width:180px;height:180px;top:-60px;right:-60px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Booking H-45</span>
+        <div class="hl" style="font-size:clamp(24px,5vw,38px);color:#fff;">Booking<br>Sekarang —<br><span style="color:var(--gold);">Harga Terjaga.</span></div>
+        <div class="chips">
+          <span class="chip">🐏 Jantan Gagah Ready</span>
+          <span class="chip">📆 Countdown Aktif</span>
+          <span class="chip">🎁 Paket Bundle Tersedia</span>
+        </div>
+        <p class="body" style="color:rgba(255,255,255,.75);">Pilih sendiri, lihat langsung, dan qurban dengan tenang. Lokasi Malang Raya &amp; kirim se-Jawa Timur.</p>
+      </div>
+    </div>
+    <div class="slide bg-gold golds">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:160px;height:160px;bottom:-50px;right:-50px;border-color:rgba(0,0,0,.12);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Promo Terbatas</span>
+        <div class="hl" style="font-size:clamp(24px,5vw,38px);">Beli Jantan<br>+ Gratis<br>Betina.</div>
+        <p class="body">Paket spesial bundle qurban SAE Aqiqah. Slot sangat terbatas — hubungi tim kami sekarang.</p>
+        <span class="cta">📲 Booking Qurban</span>
+        <span class="handle">0822-3061-1299</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(10,0)"></div><div class="dot" onclick="g(10,1)"></div><div class="dot" onclick="g(10,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(10)">←</button><button class="nb" onclick="n(10)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 12 Juni 2026</div>
+  <div class="cap-title">Kambing Qurban Idul Adha 2026</div>
+  <div class="cap-text">Idul Adha semakin dekat! SAE Aqiqah sudah menyiapkan kambing qurban pilihan dengan kondisi sehat, gemuk, dan memenuhi syarat. Kami buka kesempatan booking lebih awal dengan paket menarik. Pilih sendiri, lihat langsung, dan qurban dengan tenang.</div>
+  <div class="cap-tags">#Qurban2026 #IdulAdha #KambingQurbanMalang #PaketQurban #SAEAqiqah #HewanQurban #KurbanSyar'i #PromoQurban #BeliJantanGratisBetina #KandangSendiri</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 11 – Aqiqah Bayi Perempuan vs Laki-laki
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 11 · Perempuan vs Laki-laki</div><div class="sep-line"></div></div>
+<div class="cw" data-c="11">
+  <div class="frame"><div class="track">
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:190px;height:190px;top:-70px;left:-70px;border-color:rgba(196,30,58,.15);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl" style="background:var(--red);"></div>
+        <span class="tag" style="background:var(--red);color:#fff;">Fiqih Aqiqah</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,42px);">Berapa<br>Ekor untuk<br><span style="color:var(--red);">Bayi Anda?</span></div>
+        <p class="body">Masih banyak yang bingung perbedaan aqiqah bayi perempuan dan laki-laki. Yuk, kenali dalilnya!</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco dot-r" style="width:150px;height:150px;bottom:-50px;left:-30px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Berdasarkan Sunnah</span>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0;">
+          <div style="text-align:center;background:rgba(255,255,255,.05);border:1px solid rgba(184,151,58,.3);padding:14px 8px;border-radius:6px;">
+            <div style="font-size:24px;margin-bottom:6px;">👧</div>
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--gold);line-height:1;">1</div>
+            <div style="font-family:'DM Mono',monospace;font-size:8px;color:rgba(255,255,255,.6);letter-spacing:.1em;text-transform:uppercase;margin-top:4px;">Ekor Kambing<br>Bayi Perempuan</div>
+          </div>
+          <div style="text-align:center;background:rgba(196,30,58,.12);border:1px solid rgba(196,30,58,.35);padding:14px 8px;border-radius:6px;">
+            <div style="font-size:24px;margin-bottom:6px;">👦</div>
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--red);line-height:1;">2</div>
+            <div style="font-family:'DM Mono',monospace;font-size:8px;color:rgba(255,255,255,.6);letter-spacing:.1em;text-transform:uppercase;margin-top:4px;">Ekor Kambing<br>Bayi Laki-laki</div>
+          </div>
+        </div>
+        <p class="body" style="color:rgba(255,255,255,.65);font-size:11.5px;">Pendapat jumhur ulama. Yang terpenting ikhlas &amp; tepat syariat.</p>
+      </div>
+    </div>
+    <div class="slide bg-red reds">
+      <div class="grain"></div>
+      <div class="deco ring-r" style="width:180px;height:180px;bottom:-60px;right:-60px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Konsultasi Gratis</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,42px);color:#fff;">SAE Siap<br>Bantu<br>Kelancaran.</div>
+        <p class="body" style="color:rgba(255,255,255,.8);">1 atau 2 ekor — kami siapkan semuanya. Ibadah Anda layak mendapat pendampingan terbaik.</p>
+        <span class="cta">📲 Tanya Sekarang</span>
+        <span class="handle">@saeaqiqah</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(11,0)"></div><div class="dot" onclick="g(11,1)"></div><div class="dot" onclick="g(11,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(11)">←</button><button class="nb" onclick="n(11)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 14 Juni 2026</div>
+  <div class="cap-title">Aqiqah Bayi Perempuan vs Laki-laki</div>
+  <div class="cap-text">Masih banyak yang tanya, bedanya aqiqah untuk bayi perempuan dan laki-laki apa? Berdasarkan sunnah, untuk anak laki-laki 2 ekor kambing dan perempuan 1 ekor (pendapat jumhur). Yang terpenting adalah ikhlas dan tepat syariat. SAE Aqiqah siap membantu kelancaran ibadah Anda.</div>
+  <div class="cap-tags">#AqiqahBayiPerempuan #AqiqahLakiLaki #FiqihAqiqah #SAEAqiqah #KeluargaMuslim #AqiqahSunnah #KelahiranBayi #HukumAqiqah #TuntunanNabi #AqiqahBerkah</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 12 – 20 Tahun Pengalaman
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 12 · 20 Tahun SAE</div><div class="sep-line"></div></div>
+<div class="cw" data-c="12">
+  <div class="frame"><div class="track">
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:220px;height:220px;top:-80px;right:-80px;"></div>
+      <div class="bign" style="bottom:0;left:0;font-size:110px;opacity:.07;">20</div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Sejak 2004</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,44px);color:#fff;">Dari<br>Kandang<br><span style="color:var(--gold);">ke Meja Tamu.</span></div>
+        <p class="body" style="color:rgba(255,255,255,.75);">20 tahun lalu dari lahan sederhana di belakang UMM 3, perjalanan kami dimulai. Geser untuk kisahnya.</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco dot-r" style="width:120px;height:120px;bottom:20px;right:-20px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl" style="background:var(--gold);"></div>
+        <span class="tag" style="background:var(--gold);color:var(--black);">Ribuan Pelanggan Puas</span>
+        <div class="hl" style="font-size:clamp(22px,4.5vw,34px);">Warisan<br>yang Terus<br>Berkembang.</div>
+        <div class="chips" style="margin-top:8px;">
+          <span class="chip">🕰️ Berdiri 2004</span>
+          <span class="chip">📈 Ribuan Order</span>
+          <span class="chip">🚀 Go Digital 2026</span>
+        </div>
+        <p class="body">Kami tidak meninggalkan warisan, justru melebarkannya dengan inovasi digital. Berkah terus.</p>
+      </div>
+    </div>
+    <div class="slide bg-gold golds">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:180px;height:180px;bottom:-60px;left:-60px;border-color:rgba(0,0,0,.12);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Nilai Abadi</span>
+        <div class="hl" style="font-size:clamp(24px,5vw,38px);">Syar'i.<br>Amanah.<br>Excellent.</div>
+        <p class="body" style="font-style:italic;">"Terima kasih untuk seluruh kepercayaan. Mari terus berkah bersama."</p>
+        <span class="cta">📲 Bergabung Bersama Kami</span>
+        <span class="handle">@saeaqiqah</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(12,0)"></div><div class="dot" onclick="g(12,1)"></div><div class="dot" onclick="g(12,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(12)">←</button><button class="nb" onclick="n(12)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 16 Juni 2026</div>
+  <div class="cap-title">Dari Kandang ke Meja Tamu: 20 Tahun Pengalaman</div>
+  <div class="cap-text">20 tahun lalu dari lahan sederhana di belakang UMM 3, kami memulai. Hari ini SAE Aqiqah tetap berpegang pada nilai: SYAR'I, AMANAH, EXCELLENT. Kami tidak meninggalkan warisan, justru melebarkannya dengan inovasi digital. Terima kasih untuk seluruh kepercayaan.</div>
+  <div class="cap-tags">#20TahunSAE #SejarahAqiqah #SAEAqiqah #MalangPremium #KandangMilikSendiri #LayananAqiqah #NilaiSyar'i #KeluargaBerkah #Tegalgondo #UMM3Malang</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 13 – Bisnis B2B Supplier Daging
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 13 · B2B Supplier Daging</div><div class="sep-line"></div></div>
+<div class="cw" data-c="13">
+  <div class="frame"><div class="track">
+    <div class="slide bg-red reds">
+      <div class="grain"></div>
+      <div class="deco ring-r" style="width:200px;height:200px;top:-70px;right:-70px;"></div>
+      <div class="bign" style="bottom:0;left:0;opacity:.07;">B2B</div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Untuk Mitra Bisnis</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,42px);color:#fff;">Supplier<br>Daging<br>Terpercaya.</div>
+        <p class="body" style="color:rgba(255,255,255,.8);">Pemilik warung sate, restoran, hotel? SAE Aqiqah buka kerja sama B2B dengan harga kompetitif.</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco dot-g" style="width:160px;height:160px;bottom:-50px;left:-50px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Keunggulan B2B</span>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(184,151,58,.2);padding:12px 14px;border-radius:6px;margin-bottom:12px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:rgba(255,255,255,.8);line-height:2;">
+            🍖 Daging segar @Rp130.000/kg<br>
+            🚚 Pengiriman rutin terjadwal<br>
+            🤝 Sampel gratis calon mitra<br>
+            🦴 Kepala, kaki, karkas tersedia
+          </div>
+        </div>
+        <p class="body" style="color:rgba(255,255,255,.65);font-size:12px;">Kualitas stabil dari kandang sendiri. Pasokan terjamin setiap hari.</p>
+      </div>
+    </div>
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:160px;height:160px;top:-50px;left:-50px;border-color:rgba(184,151,58,.2);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl" style="background:var(--gold);"></div>
+        <span class="tag" style="background:var(--gold);color:var(--black);">Free Sample</span>
+        <div class="hl" style="font-size:clamp(24px,5vw,38px);">Coba Dulu,<br>Baru<br>Kerja Sama.</div>
+        <p class="body">Free sample untuk uji rasa. Bergabung bersama jaringan mitra B2B SAE Aqiqah Malang.</p>
+        <span class="cta" style="background:var(--black);color:#fff;">📲 Hubungi Tim B2B</span>
+        <span class="handle" style="color:#666;">0813-3312-0579</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(13,0)"></div><div class="dot" onclick="g(13,1)"></div><div class="dot" onclick="g(13,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(13)">←</button><button class="nb" onclick="n(13)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 18 Juni 2026</div>
+  <div class="cap-title">Bisnis B2B: Supplier Daging untuk Warung Sate</div>
+  <div class="cap-text">Pemilik warung sate, restoran, atau hotel? SAE Aqiqah membuka kerja sama B2B dengan harga kompetitif, kualitas stabil, dan pasokan dari kandang sendiri. Kepala kambing, kaki, karkas utuh juga tersedia. Free sample untuk uji rasa. Hubungi Tim B2B sekarang.</div>
+  <div class="cap-tags">#SupplierDagingMalang #B2BAqiqah #DagingKambingSegar #WarungSate #RestoranMalang #KarkasKambing #SAEAqiqahB2B #HargaKompetitif #KulinerMalang #ChefIndonesia</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 14 – Paket Aqiqah Lengkap
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 14 · Paket Aqiqah Lengkap</div><div class="sep-line"></div></div>
+<div class="cw" data-c="14">
+  <div class="frame"><div class="track">
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco dot-g" style="width:200px;height:200px;bottom:-70px;right:-70px;"></div>
+      <div class="bign" style="top:0;left:0;opacity:.07;">📦</div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">All-In-One</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,44px);color:#fff;">Paket<br>Komplit —<br><span style="color:var(--gold);">Zero Ribet.</span></div>
+        <p class="body" style="color:rgba(255,255,255,.75);">Takut ribet mengurus aqiqah? Cukup satu telpon, kami yang handle semuanya. Geser lihat isinya.</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:150px;height:150px;bottom:-40px;left:-40px;border-color:rgba(184,151,58,.2);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl" style="background:var(--gold);"></div>
+        <span class="tag" style="background:var(--gold);color:var(--black);">Yang Anda Dapatkan</span>
+        <div class="hl" style="font-size:clamp(20px,4vw,30px);">Pilih Kambing<br>→ Sembelih Syar'i<br>→ Olah Higienis<br>→ Kirim ke Rumah.</div>
+        <div class="chips" style="margin-top:8px;">
+          <span class="chip">📦 Kardus Hitam Premium</span>
+          <span class="chip">📄 Sertifikat &amp; Doa</span>
+          <span class="chip">🍱 Menu Lengkap</span>
+        </div>
+      </div>
+    </div>
+    <div class="slide bg-gold golds">
+      <div class="grain"></div>
+      <div class="deco dot-r" style="width:130px;height:130px;top:-30px;right:-30px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Ketenangan Ibadah</span>
+        <div class="hl" style="font-size:clamp(24px,5vw,38px);">Yang Anda<br>Bayar:<br>Ketenangan.</div>
+        <p class="body" style="font-style:italic;">"Ketenangan ibadah dan kebahagiaan berbagi — itulah paket sesungguhnya dari SAE."</p>
+        <span class="cta">📲 Booking Paket Komplit</span>
+        <span class="handle">0822-3061-1299</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(14,0)"></div><div class="dot" onclick="g(14,1)"></div><div class="dot" onclick="g(14,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(14)">←</button><button class="nb" onclick="n(14)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 20 Juni 2026</div>
+  <div class="cap-title">Paket Aqiqah Lengkap: Apa Saja yang Didapat?</div>
+  <div class="cap-text">Takut ribet mengurus aqiqah? Paket komplit SAE Aqiqah mulai dari pemilihan kambing, penyembelihan syar'i, pengolahan higienis, hingga pengiriman ke rumah. Sajian packing premium, aman sampai tujuan. Yang Anda dapatkan: ketenangan ibadah dan kebahagiaan berbagi.</div>
+  <div class="cap-tags">#PaketAqiqahLengkap #AqiqahTanpaRibet #SAEAqiqah #CateringAqiqah #KardusHitamPremium #AqiqahSiapSaji #KirimAqiqah #ProsesHigienis #BookingAqiqah #MeatBox</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 15 – Lihat Langsung Kambing
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 15 · Lihat Langsung Kandang</div><div class="sep-line"></div></div>
+<div class="cw" data-c="15">
+  <div class="frame"><div class="track">
+    <div class="slide bg-red reds">
+      <div class="grain"></div>
+      <div class="deco ring-r" style="width:190px;height:190px;top:-70px;left:-70px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Transparansi Modern</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,44px);color:#fff;">Mau<br>Lihat<br>Langsung?</div>
+        <p class="body" style="color:rgba(255,255,255,.8);">Belanja aqiqah online boleh saja, tapi lebih tenang kalau bisa lihat langsung. Kami bisa!</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco dot-g" style="width:160px;height:160px;bottom:-50px;right:-50px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">2 Cara Mudah</span>
+        <div style="display:flex;flex-direction:column;gap:8px;margin:10px 0;">
+          <div style="background:rgba(255,255,255,.05);border:1px solid rgba(184,151,58,.3);padding:10px 14px;border-radius:6px;display:flex;align-items:center;gap:10px;">
+            <span style="font-size:20px;">📍</span>
+            <div><div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--gold);letter-spacing:.15em;margin-bottom:3px;">DATANG LANGSUNG</div><div style="font-family:'Cormorant Garamond',serif;font-size:12px;color:rgba(255,255,255,.75);">Jl. Raya Ketangi No.60, Tegalgondo</div></div>
+          </div>
+          <div style="background:rgba(255,255,255,.05);border:1px solid rgba(196,30,58,.3);padding:10px 14px;border-radius:6px;display:flex;align-items:center;gap:10px;">
+            <span style="font-size:20px;">🤳</span>
+            <div><div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--red);letter-spacing:.15em;margin-bottom:3px;">VIDEO CALL KANDANG</div><div style="font-family:'Cormorant Garamond',serif;font-size:12px;color:rgba(255,255,255,.75);">Tim SAE show realtime via WA</div></div>
+          </div>
+        </div>
+        <p class="body" style="color:rgba(255,255,255,.65);font-size:11.5px;">Tidak ada istilah "tidak sesuai ekspektasi" karena Anda yang tentukan.</p>
+      </div>
+    </div>
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:160px;height:160px;top:-50px;right:-50px;border-color:rgba(196,30,58,.15);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl" style="background:var(--red);"></div>
+        <span class="tag" style="background:var(--red);color:#fff;">100% Sesuai Ekspektasi</span>
+        <div class="hl" style="font-size:clamp(24px,5vw,38px);">Pilih<br>Kambing<br>Favorit Anda.</div>
+        <p class="body">Lihat ukuran, cek kesehatan, baru pesan. Aqiqah modern yang tetap amanah.</p>
+        <span class="cta" style="background:var(--black);color:#fff;">📲 Jadwalkan Kunjungan</span>
+        <span class="handle" style="color:#666;">@saeaqiqah</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(15,0)"></div><div class="dot" onclick="g(15,1)"></div><div class="dot" onclick="g(15,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(15)">←</button><button class="nb" onclick="n(15)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 22 Juni 2026</div>
+  <div class="cap-title">Keuntungan Bisa Lihat Langsung Kambing</div>
+  <div class="cap-text">Belanja aqiqah online boleh saja, tapi lebih tenang kalau bisa lihat langsung. Di SAE Aqiqah, Anda bisa datang atau minta video call ke kandang. Pilih kambing favorit, lihat ukuran, dan baru pesan. Tidak ada istilah 'kambing tidak sesuai' karena Anda yang tentukan.</div>
+  <div class="cap-tags">#LihatLangsung #PilihKambingSendiri #SAEAqiqah #TransparansiPenuh #VideoCallKandang #AqiqahModern #MalangDigital #KambingIdaman #JasaAqiqahMalang</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 16 – Waktu Terbaik Aqiqah
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 16 · Waktu Terbaik Aqiqah</div><div class="sep-line"></div></div>
+<div class="cw" data-c="16">
+  <div class="frame"><div class="track">
+    <div class="slide bg-gold golds">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:200px;height:200px;top:-70px;right:-70px;border-color:rgba(0,0,0,.1);"></div>
+      <div class="bign" style="bottom:0;left:0;opacity:.07;">7</div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Edukasi Fiqih</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,44px);">Kapan<br>Waktu<br>Terbaik?</div>
+        <p class="body" style="font-style:italic;">Ada waktu yang paling utama — dan ada batas yang perlu Anda tahu. Geser untuk jawabannya.</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco dot-r" style="width:150px;height:150px;top:-40px;left:-40px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Urutan Waktu Afdhal</span>
+        <div style="display:flex;flex-direction:column;gap:6px;margin:8px 0 12px;">
+          <div style="display:flex;align-items:center;gap:10px;background:rgba(184,151,58,.12);border:1px solid rgba(184,151,58,.3);padding:8px 12px;border-radius:4px;">
+            <span style="font-family:'Bebas Neue';font-size:20px;color:var(--gold);">1st</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-size:13px;color:rgba(255,255,255,.85);">🗓️ Hari ke-7 kelahiran (paling afdhal)</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:8px 12px;border-radius:4px;">
+            <span style="font-family:'Bebas Neue';font-size:20px;color:var(--muted);">2nd</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-size:13px;color:rgba(255,255,255,.7);">⌛ Hari ke-14 atau ke-21</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:8px 12px;border-radius:4px;">
+            <span style="font-family:'Bebas Neue';font-size:20px;color:var(--muted);">3rd</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-size:13px;color:rgba(255,255,255,.7);">🏡 Sebelum anak baligh (batas akhir)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide bg-red reds">
+      <div class="grain"></div>
+      <div class="deco ring-r" style="width:180px;height:180px;bottom:-60px;right:-60px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Jangan Lewat Baligh</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,40px);color:#fff;">SAE Siap<br>Kapanpun<br>Anda Butuh.</div>
+        <p class="body" style="color:rgba(255,255,255,.8);">Pelayanan cepat &amp; tepat — hari ke-7 atau kapan saja. Yang utama: jangan sampai ditinggalkan.</p>
+        <span class="cta">📲 Konsultasi Gratis</span>
+        <span class="handle">@saeaqiqah</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(16,0)"></div><div class="dot" onclick="g(16,1)"></div><div class="dot" onclick="g(16,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(16)">←</button><button class="nb" onclick="n(16)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 24 Juni 2026</div>
+  <div class="cap-title">Kapan Waktu Terbaik Aqiqah?</div>
+  <div class="cap-text">Waktu terbaik aqiqah adalah hari ke-7 setelah kelahiran. Tapi jika ada kendala, masih bisa di hari ke-14, 21, atau kapan saja sebelum anak baligh. Yang utama jangan sampai ditinggalkan. SAE Aqiqah siap membantu kapan pun Anda butuh, dengan pelayanan cepat &amp; tepat.</div>
+  <div class="cap-tags">#WaktuAqiqah #HariKe7 #AqiqahBayi #SAEAqiqah #KelahiranAnak #AqiqahTepatWaktu #EdukasiSyariat #BundaSholehah #MalangRaya #IbadahSempurna</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 17 – Harga Bukan Segalanya
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 17 · Harga Bukan Segalanya</div><div class="sep-line"></div></div>
+<div class="cw" data-c="17">
+  <div class="frame"><div class="track">
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:210px;height:210px;top:-80px;left:-80px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Nilai Lebih dari Harga</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,44px);color:#fff;">Mengapa<br>Harga<br><span style="color:var(--gold);">Bukan<br>Segalanya.</span></div>
+        <p class="body" style="color:rgba(255,255,255,.75);">SAE tidak pernah menjual yang termurah. Tapi kami menjamin nilai lebih yang sesungguhnya.</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco dot-r" style="width:130px;height:130px;bottom:20px;right:-20px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl" style="background:var(--red);"></div>
+        <span class="tag" style="background:var(--red);color:#fff;">Yang Anda Bayar</span>
+        <div class="hl" style="font-size:clamp(22px,4.5vw,34px);">Ketenangan<br>Hati +<br>Keabsahan.</div>
+        <div class="chips" style="margin-top:8px;">
+          <span class="chip">🐐 Kambing Poel Terjamin</span>
+          <span class="chip">🔍 Proses Terbuka</span>
+          <span class="chip">🍽️ Sajian Bintang Lima</span>
+        </div>
+        <p class="body">Harga kompetitif yang setara dengan ketenangan ibadah Anda. Inilah investasi yang sesungguhnya.</p>
+      </div>
+    </div>
+    <div class="slide bg-gold golds">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:170px;height:170px;bottom:-55px;left:-55px;border-color:rgba(0,0,0,.12);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Investasi Ibadah</span>
+        <div class="hl-i" style="font-size:clamp(22px,4.5vw,34px);">"Ibadah yang sah<br>tak ternilai harganya."</div>
+        <p class="body">Jangan biarkan harga kompetitif mengaburkan nilai ibadah. Pilih yang amanah, pilih SAE.</p>
+        <span class="cta">📲 Tanya Harga Kompetitif</span>
+        <span class="handle">0822-3061-1299</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(17,0)"></div><div class="dot" onclick="g(17,1)"></div><div class="dot" onclick="g(17,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(17)">←</button><button class="nb" onclick="n(17)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 26 Juni 2026</div>
+  <div class="cap-title">Mengapa Harga Bukan Segalanya</div>
+  <div class="cap-text">Banyak yang tergiur harga kompetitif, namun lupa mengecek umur kambing, kebersihan, dan kesesuaian syariat. SAE Aqiqah tidak pernah menjual yang termurah, tapi kami menjamin nilai lebih: kambing poel, proses terbuka, sajian bintang lima.</div>
+  <div class="cap-tags">#HargaBukanPatokan #AqiqahBerkualitas #SAEAqiqah #InvestasiIbadah #KetenanganHati #Transparan #PremiumValue #MalangRaya #QualityOverPrice #AqiqahIdaman</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 18 – Behind the Scene: Dapur Higienis
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 18 · Dapur Higienis SAE</div><div class="sep-line"></div></div>
+<div class="cw" data-c="18">
+  <div class="frame"><div class="track">
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco dot-g" style="width:180px;height:180px;top:-60px;right:-60px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Behind The Scene</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,44px);color:#fff;">Dapur<br>Higienis<br><span style="color:var(--gold);">SAE.</span></div>
+        <p class="body" style="color:rgba(255,255,255,.75);">Sajian premium lahir dari dapur yang bersih dan terstandar. Ini yang selalu kami jaga untuk Anda.</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:150px;height:150px;bottom:-40px;left:-40px;border-color:rgba(184,151,58,.18);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl" style="background:var(--gold);"></div>
+        <span class="tag" style="background:var(--gold);color:var(--black);">Standar Mutu</span>
+        <div class="hl" style="font-size:clamp(22px,4.5vw,34px);">Ketat, Rapi,<br>Penuh<br>Cinta.</div>
+        <div class="chips" style="margin-top:8px;">
+          <span class="chip">🧼 Kebersihan Ketat</span>
+          <span class="chip">🧑‍🍳 Tim Berseragam</span>
+          <span class="chip">🍽️ Gloves &amp; Masker</span>
+        </div>
+        <p class="body">Kami memperlakukan daging sebagaimana layaknya untuk keluarga sendiri. Higienis dari awal hingga packing.</p>
+      </div>
+    </div>
+    <div class="slide bg-red reds">
+      <div class="grain"></div>
+      <div class="deco ring-r" style="width:190px;height:190px;top:-70px;right:-70px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Kepercayaan Bertumbuh</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,40px);color:#fff;">Rasa &amp;<br>Kepercayaan<br>Makin Kuat.</div>
+        <p class="body" style="color:rgba(255,255,255,.8);">Tim SAE bekerja profesional dari memasak hingga packing. Ini yang membuat pelanggan kembali lagi.</p>
+        <span class="cta">📲 Pesan Sajian Premium</span>
+        <span class="handle">@saeaqiqah</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(18,0)"></div><div class="dot" onclick="g(18,1)"></div><div class="dot" onclick="g(18,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(18)">←</button><button class="nb" onclick="n(18)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 28 Juni 2026</div>
+  <div class="cap-title">Behind the Scene: Dapur Higienis SAE</div>
+  <div class="cap-text">Sajian premium lahir dari dapur yang bersih dan terstandar. Kami memperlakukan daging sebagaimana layaknya untuk keluarga sendiri. Higienis, rapi, dan penuh cinta. Tim SAE bekerja profesional dari memasak hingga packing.</div>
+  <div class="cap-tags">#DapurHigienis #BehindTheScene #SAEAqiqah #StandarMutu #KulinerMalang #ChefAqiqah #ProsesMemasak #FoodSafety #PremiumCatering #DagingBersih</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 19 – Produk Frozen
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 19 · Produk Frozen SAE</div><div class="sep-line"></div></div>
+<div class="cw" data-c="19">
+  <div class="frame"><div class="track">
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:180px;height:180px;bottom:-60px;right:-60px;border-color:rgba(10,10,10,.1);"></div>
+      <div class="bign" style="top:0;left:0;color:rgba(10,10,10,.05);">❄</div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl" style="background:var(--black);"></div>
+        <span class="tag" style="background:var(--black);color:#fff;">Produk Baru!</span>
+        <div class="hl" style="font-size:clamp(26px,5.5vw,44px);">Daging<br>Frozen<br><span style="color:var(--red);">SAE.</span></div>
+        <p class="body">Kini SAE Aqiqah hadir dengan lini produk frozen! Daging segar langsung divakum. Geser lihat selengkapnya.</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco dot-g" style="width:160px;height:160px;top:-50px;right:-50px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Tersedia di Marketplace</span>
+        <div style="display:flex;flex-direction:column;gap:6px;margin:10px 0;">
+          <div style="background:rgba(255,255,255,.05);border:1px solid rgba(184,151,58,.25);padding:9px 12px;border-radius:4px;display:flex;align-items:center;gap:8px;">
+            <span style="font-size:16px;">❄️</span><span style="font-family:'Cormorant Garamond',serif;font-size:13px;color:rgba(255,255,255,.8);">Vacuum 500gr &amp; 1kg — tahan lama</span>
+          </div>
+          <div style="background:rgba(255,255,255,.05);border:1px solid rgba(184,151,58,.25);padding:9px 12px;border-radius:4px;display:flex;align-items:center;gap:8px;">
+            <span style="font-size:16px;">🛒</span><span style="font-family:'Cormorant Garamond',serif;font-size:13px;color:rgba(255,255,255,.8);">Shopee &amp; Tokopedia tersedia</span>
+          </div>
+          <div style="background:rgba(255,255,255,.05);border:1px solid rgba(184,151,58,.25);padding:9px 12px;border-radius:4px;display:flex;align-items:center;gap:8px;">
+            <span style="font-size:16px;">🍳</span><span style="font-family:'Cormorant Garamond',serif;font-size:13px;color:rgba(255,255,255,.8);">Kepala, kaki beku untuk rumahan</span>
+          </div>
+        </div>
+        <p class="body" style="color:rgba(255,255,255,.65);font-size:12px;">Kualitas kandang SAE, kini hadir di dapur Anda kapan saja.</p>
+      </div>
+    </div>
+    <div class="slide bg-gold golds">
+      <div class="grain"></div>
+      <div class="deco dot-r" style="width:140px;height:140px;bottom:-40px;right:-40px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Praktis &amp; Bergizi</span>
+        <div class="hl" style="font-size:clamp(24px,5vw,38px);">Tinggal<br>Masak.<br>Lezat.</div>
+        <p class="body" style="font-style:italic;">Sebisa mungkin kami hadir di dapur Anda — kapan saja, di mana saja. Order via WA atau marketplace!</p>
+        <span class="cta">📲 Order Frozen SAE</span>
+        <span class="handle">0822-3061-1299</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(19,0)"></div><div class="dot" onclick="g(19,1)"></div><div class="dot" onclick="g(19,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(19)">←</button><button class="nb" onclick="n(19)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 30 Juni 2026</div>
+  <div class="cap-title">Produk Frozen: Daging Siap Masak</div>
+  <div class="cap-text">Kini SAE Aqiqah hadir dengan lini produk frozen! Daging kambing segar yang langsung divakum, tahan lama, dan tetap berkualitas. Tersedia juga kepala, kaki beku untuk warung atau kebutuhan rumahan. Order via WA atau online marketplace segera!</div>
+  <div class="cap-tags">#DagingFrozen #FrozenMeatMalang #SAEAqiqah #DagingKambingVacuum #ProdukFrozen #ShopeeFood #DagingSiapMasak #SupplierFrozen #KirimNasional #KulinerPraktis</div>
+</div>
+
+<!-- ============================================================
+     CAROUSEL 20 – Komitmen SAE: Syar'i Amanah Excellent
+============================================================ -->
+<div class="sep"><div class="sep-line"></div><div class="sep-lbl">Carousel 20 · Komitmen SAE</div><div class="sep-line"></div></div>
+<div class="cw" data-c="20">
+  <div class="frame"><div class="track">
+    <div class="slide bg-dark dark">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:240px;height:240px;top:-90px;right:-90px;"></div>
+      <div class="deco dot-r" style="width:100px;height:100px;bottom:20px;left:-20px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">01 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">3 Pilar Tak Tergoyahkan</span>
+        <div class="hl" style="font-size:clamp(24px,5vw,40px);color:#fff;line-height:1.1;"><span style="color:var(--gold);">Syar'i.</span><br><span style="color:var(--red);">Amanah.</span><br>Excellent.</div>
+        <p class="body" style="color:rgba(255,255,255,.75);margin-top:10px;">Tiga pilar yang tidak bisa ditawar. Inilah pondasi 20 tahun kepercayaan keluarga Muslim Malang.</p>
+        <span class="sw">Geser →</span>
+      </div>
+    </div>
+    <div class="slide bg-cream light">
+      <div class="grain"></div>
+      <div class="deco ring" style="width:170px;height:170px;bottom:-55px;left:-55px;border-color:rgba(184,151,58,.2);"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">02 — 03</span></div>
+        <div class="divl" style="background:var(--gold);"></div>
+        <span class="tag" style="background:var(--gold);color:var(--black);">Apa Artinya?</span>
+        <div style="display:flex;flex-direction:column;gap:8px;margin:8px 0;">
+          <div style="background:rgba(184,151,58,.08);border:1px solid rgba(184,151,58,.25);padding:9px 14px;border-radius:4px;">
+            <span style="font-family:'Bebas Neue';font-size:13px;letter-spacing:.1em;color:var(--gold);">SYAR'I </span><span style="font-family:'Cormorant Garamond',serif;font-size:12px;color:#555;">— 100% sesuai tuntunan Islam</span>
+          </div>
+          <div style="background:rgba(196,30,58,.06);border:1px solid rgba(196,30,58,.2);padding:9px 14px;border-radius:4px;">
+            <span style="font-family:'Bebas Neue';font-size:13px;letter-spacing:.1em;color:var(--red);">AMANAH </span><span style="font-family:'Cormorant Garamond',serif;font-size:12px;color:#555;">— terbuka tanpa rekayasa</span>
+          </div>
+          <div style="background:rgba(10,10,10,.05);border:1px solid rgba(10,10,10,.12);padding:9px 14px;border-radius:4px;">
+            <span style="font-family:'Bebas Neue';font-size:13px;letter-spacing:.1em;color:var(--black);">EXCELLENT </span><span style="font-family:'Cormorant Garamond',serif;font-size:12px;color:#555;">— layanan &amp; rasa premium</span>
+          </div>
+        </div>
+        <p class="body" style="font-size:11.5px;">Bergabunglah dengan ribuan keluarga yang telah merasakan perbedaannya.</p>
+      </div>
+    </div>
+    <div class="slide bg-red reds">
+      <div class="grain"></div>
+      <div class="deco ring-r" style="width:220px;height:220px;top:-80px;right:-80px;"></div>
+      <div class="deco ring-r" style="width:150px;height:150px;bottom:-50px;left:-50px;"></div>
+      <div class="sc">
+        <div class="meta"><span class="bm">SAE AQIQAH</span><span class="sn">03 — 03</span></div>
+        <div class="divl"></div>
+        <span class="tag">Terima Kasih</span>
+        <div class="hl-i" style="font-size:clamp(20px,4.5vw,32px);color:#fff;line-height:1.2;">"Sempurna<br>Syariatnya,<br>Premium<br>Sajiannya."</div>
+        <p class="body" style="color:rgba(255,255,255,.8);margin-top:10px;">Terima kasih atas kepercayaan Anda. Sebarkan kebaikan — bagikan ke sanak saudara. Sampai jumpa di kandang!</p>
+        <span class="cta">📲 Hubungi SAE Aqiqah</span>
+        <span class="handle">0822-3061-1299 · @saeaqiqah</span>
+      </div>
+    </div>
+  </div></div>
+  <div class="ctrl">
+    <div class="dots"><div class="dot on" onclick="g(20,0)"></div><div class="dot" onclick="g(20,1)"></div><div class="dot" onclick="g(20,2)"></div></div>
+    <div class="navrow"><button class="nb" onclick="p(20)">←</button><button class="nb" onclick="n(20)">→</button></div>
+    <p class="hint">Swipe atau klik panah</p>
+  </div>
+</div>
+<div class="cap-box">
+  <div class="cap-date">📅 2 Juli 2026</div>
+  <div class="cap-title">Komitmen SAE: Syar'i, Amanah, Excellent</div>
+  <div class="cap-text">Tiga pilar yang tidak bisa ditawar. SAE Aqiqah terus berkomitmen menjadi mitra ibadah keluarga Muslim Malang dan sekitarnya. Terima kasih telah mempercayakan aqiqah &amp; qurban bersama kami. Mari sebarkan kebaikan dengan berbagi informasi ini ke sanak saudara. Sampai jumpa di kandang!</div>
+  <div class="cap-tags">#Syar'iAmanahExcellent #SAEAqiqah #KomitmenBrand #AqiqahMalang #KeluargaBerkah #PremiumSyari #LayananPrima #KandangKami #Tegalgondo #AqiqahSunnah</div>
+</div>
+
+<footer>
+  SAE Aqiqah — Sempurna Syariatnya, Premium Sajiannya<br>
+  Jl. Raya Ketangi No. 60, Tegalgondo, Malang · WA: 0822-3061-1299 · @saeaqiqah<br><br>
+  20 Carousel Posts · Instagram &amp; TikTok · Mei–Juli 2026
+</footer>
+
+<script>
+const st={};
+document.querySelectorAll('[data-c]').forEach(w=>{st[+w.dataset.c]=0;});
+function g(id,i){
+  st[id]=i;
+  const w=document.querySelector(`[data-c="${id}"]`);
+  w.querySelector('.track').style.transform=`translateX(-${i*100}%)`;
+  w.querySelectorAll('.dot').forEach((d,j)=>d.classList.toggle('on',j===i));
+}
+function n(id){const w=document.querySelector(`[data-c="${id}"]`);g(id,(st[id]+1)%w.querySelectorAll('.slide').length);}
+function p(id){const w=document.querySelector(`[data-c="${id}"]`);g(id,(st[id]-1+w.querySelectorAll('.slide').length)%w.querySelectorAll('.slide').length);}
+document.querySelectorAll('.frame').forEach(f=>{
+  let x=0;const w=f.closest('[data-c]'),id=+w.dataset.c;
+  f.addEventListener('touchstart',e=>{x=e.touches[0].clientX;},{passive:true});
+  f.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-x;if(Math.abs(d)>40)d<0?n(id):p(id);},{passive:true});
+});
+</script>
+</body>
+</html>
